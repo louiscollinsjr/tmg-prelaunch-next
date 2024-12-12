@@ -1,14 +1,13 @@
-import PreLaunchHome from "@/components/Home";
+import ProfessionalHome from '@/components/ProfesionalHome';
 
 export async function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }];
 }
 
-export default function Home() {
+export default function ProfessionalsPage() {
   return (
     <main>
-      <PreLaunchHome />
+      <ProfessionalHome />
     </main>
   );
 }
-

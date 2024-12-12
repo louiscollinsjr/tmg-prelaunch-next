@@ -1,90 +1,59 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import ProfessionalWaitlistModal from './ProfessionalWaitlistModal';
 import Image from 'next/image';
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function PrelaunchNavigation() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname();
+  const isProfessionalsPage = pathname.endsWith('/professionals');
 
   return (
-    <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/next.svg" className="h-8" alt="Logo" width={100} height={32} />
-        </Link>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Get started
-          </button>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          className={`${
-            isOpen ? 'block' : 'hidden'
-          } items-center justify-between w-full md:flex md:w-auto md:order-1`}
-        >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <Link
-                href="/"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                aria-current="page"
-              >
-                Home
+    <div className="bg-zinc-100 max-w-screen-8xl">
+      <div className="mx-auto ~px-6/56 ~pt-6/8">
+        <div className="flex h-24 justify-between ~pt-2/12">
+          {/* Left side */}
+          <div className="flex items-center">
+          <Link href="/" className="relative z-[100] block">
+                <Image 
+                  src="/tmg_flags.png"
+                  alt="TryMyGuys"
+                  width={240}
+                  height={96}
+                  className="w-auto ~h-20/32 select-none"
+                  priority
+                />
               </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          </div>
+
+          {/* Right side */}
+          <div className="flex items-center pr-2">
+            {isProfessionalsPage ? (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="gradient-border-button inline-flex items-center  ~px-4/8 ~py-2/4 ~text-base/3xl md:~text-3xl/4xl tracking-wide font-bold rounded-full text-slate-800 bg-zinc-200 hover:bg-zinc-300 transition-all font-roboto"
               >
-                About
-              </Link>
-            </li>
-            <li>
+                Join waitlist
+              </button>
+            ) : (
               <Link
-                href="/services"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                href="/professionals"
+                className="gradient-border-button inline-flex items-center  ~px-4/8 ~py-3/4 ~text-sm/2xl md:~text-2xl/4xl font-bold tracking-normal rounded-full text-slate-800 bg-zinc-200 hover:bg-zinc-300 transition-all font-roboto"
               >
-                Services
+                For Tradespeople
               </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
+            )}
+          </div>
         </div>
       </div>
-    </nav>
+
+      <ProfessionalWaitlistModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </div>
   );
 }
