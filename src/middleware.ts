@@ -2,26 +2,33 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
  
 export function middleware(request: NextRequest) {
-  // Check if there is any supported locale in the pathname
   const pathname = request.nextUrl.pathname
-  const pathnameIsMissingLocale = ['en', 'es'].every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  
+  // Check if pathname starts with our supported locales
+  const pathnameHasLocale = ['/en', '/es'].some(
+    (locale) => pathname.startsWith(locale) || pathname === locale
   )
- 
+
+  if (pathnameHasLocale) return NextResponse.next()
+
   // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
-    const locale = 'en'
-    return NextResponse.redirect(
-      new URL(`/${locale}${pathname}`, request.url)
-    )
-  }
+  const locale = request.headers.get('accept-language')?.split(',')?.[0]?.split('-')?.[0] ?? 'en'
+  request.nextUrl.pathname = `/${locale}${pathname}`
+  return NextResponse.redirect(request.nextUrl)
 }
  
+// Matcher configuration that excludes files and specific paths from middleware
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next).*)',
-    // Optional: only run on root (/) URL
-    // '/'
-  ],
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - public/ (public directory)
+     * - SVG, PNG, JPG, JPEG files
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|public/|.*\\.(?:svg|png|jpg|jpeg)$).*)'
+  ]
 }

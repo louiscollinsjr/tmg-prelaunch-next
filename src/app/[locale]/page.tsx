@@ -1,19 +1,24 @@
 import Image from "next/image";
 
-// Import images directly
-import nextSvg from '../../../public/next.svg';
-import vercelSvg from '../../../public/vercel.svg';
-import fileSvg from '../../../public/file.svg';
-import windowSvg from '../../../public/window.svg';
-import globeSvg from '../../../public/globe.svg';
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }];
+}
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  // Await the params to get the locale
+  const { locale } = await params;
+  const lang = locale || 'en';
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
-          src={nextSvg}
+          src={"/next.svg"}
           alt="Next.js logo"
           width={180}
           height={38}
@@ -23,7 +28,7 @@ export default function Home() {
           <li className="mb-2">
             Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
+              src/app/[locale]/page.tsx
             </code>
             .
           </li>
@@ -39,7 +44,7 @@ export default function Home() {
           >
             <Image
               className="dark:invert"
-              src={vercelSvg}
+              src={"/vercel.svg"}
               alt="Vercel logomark"
               width={20}
               height={20}
@@ -55,54 +60,12 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+          <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            Current locale: {lang}
+          </p>
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={fileSvg}
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={windowSvg}
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src={globeSvg}
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
