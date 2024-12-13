@@ -13,8 +13,8 @@
   },
   "professionals": {
     "hero": {
-      "title": "Grow your business with",
-      "titleHighlight": "TryMyGuys",
+      "title": "Your go-to app for",
+      "titleHighlight": "quality jobs, on-demand",
       "description": "Join our network of trusted professionals and connect with customers looking for quality services. Get access to local jobs, manage your schedule, and grow your business on your terms.",
       "waitlist": "Join waitlist"
     },
@@ -25,7 +25,7 @@
       "description": "TryMyGuys connects trusted tradespeople with local job opportunities in minutes. Access the details you need, browse photos, and screen customers to make informed decisions before accepting a job.",
       "features": {
         "promote": "Promote your business locally",
-        "quotes": "Send quotes and schedule jobs",
+        "quotes": "Communicate easily with homeowners",
         "payments": "Grow a loyal local client base"
       }
     },

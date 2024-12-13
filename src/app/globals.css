@@ -5,11 +5,11 @@
 @layer components {
   .btn {
     @apply px-6 py-3 rounded-lg font-medium text-white;
-    background: linear-gradient(135deg, #09a4a8 0%, #0ab5b9 50%, #09a4a8 100%);
+    
   }
   
   .btn:hover {
-    background:  #088387;
+    
   }
   
   .btn:active {

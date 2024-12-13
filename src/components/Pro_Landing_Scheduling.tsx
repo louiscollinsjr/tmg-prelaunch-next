@@ -2,15 +2,11 @@
 
 import { useI18n } from '../app/i18n/client';
 
-interface PrelaunchSchedulingProps {
-  onOpenModal: () => void;
-}
-
-export default function PrelaunchScheduling({ onOpenModal }: PrelaunchSchedulingProps) {
+export default function PrelaunchScheduling() {
   const t = useI18n();
 
   return (
-    <div className="py-64 bg-zinc-100">
+    <div className="py-64">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           
@@ -45,7 +41,7 @@ export default function PrelaunchScheduling({ onOpenModal }: PrelaunchScheduling
             </ul>
 
             <button
-              onClick={onOpenModal}
+          
               className=" inline-flex items-center  ~px-5/12 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium rounded-full bg-burnt-orange text-white hover:bg-opacity-90 transition-all"
             >
               Grow your business

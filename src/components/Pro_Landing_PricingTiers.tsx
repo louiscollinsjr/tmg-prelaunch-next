@@ -85,9 +85,9 @@ export default function PricingTiers() {
   return (
     <>
       <ProfessionalWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <div className="~pt-24/80 bg-zinc-100">
-        <div className="mx-auto max-w-screen-7xl px-6 lg:px-8">
-          <div className="mx-auto ~max-w-screen-4xl/7xl text-center">
+      <div className="py-64">
+        <div className="mx-auto px-6 lg:px-8">
+          <div className="mx-auto text-center">
             <h2 className="~text-5xl/7xl md:~text-6xl/9xl font-bold tracking-tight text-slate-800">
               Pricing
             </h2>
@@ -95,7 +95,7 @@ export default function PricingTiers() {
               Choose the perfect plan for your business needs
             </p>
           </div>
-          <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-screen-8xl lg:grid-cols-4 lg:gap-x-8">
+          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-8 lg:mx-0  lg:grid-cols-4 lg:gap-x-8">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}

@@ -25,6 +25,12 @@ export default function ProfessionalHero() {
             >
               {t('professionals.hero.waitlist')}
             </button>
+            <div className="mt-4 sm:mt-0 pl-2 sm:pl-8 sm:border-l border-gray-200">
+                  <div className="text-xs text-gray-600">
+                    <p className='font-bold text-left'>Launching early 2025</p>
+                    <p className="text-left">No sign up fees</p>
+                  </div>
+            </div>      
           </div>
         </div>
       </div>

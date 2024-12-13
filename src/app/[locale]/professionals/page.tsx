@@ -1,4 +1,4 @@
-import ProfessionalHome from '@/components/ProfesionalHome';
+import ProfessionalHome from '@/components/Pro_Landing';
 
 export async function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }];
