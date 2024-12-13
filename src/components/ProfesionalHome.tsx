@@ -11,7 +11,7 @@ export default function ProfessionalsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <main className="flex min-h-screen flex-col bg-zinc-100 max-screen-w-8xl">
+    <main className="flex min-h-screen flex-col  max-screen-w-8xl">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <ProfessionalHero />
         

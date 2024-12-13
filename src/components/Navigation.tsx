@@ -41,7 +41,7 @@ export default function PrelaunchNavigation() {
             ) : (
               <Link
                 href="/professionals"
-                className="gradient-border-button inline-flex items-center  ~px-4/8 ~py-3/4 ~text-sm/2xl md:~text-2xl/4xl font-bold tracking-normal rounded-full text-slate-800 bg-zinc-200 hover:bg-zinc-300 transition-all font-roboto"
+                className="gradient-border-button inline-flex items-center  ~px-4/8 ~py-3/4 ~text-sm/2xl md:~text-2xl/4xl font-bold tracking-normal rounded-full text-slate-800 bg-stone-200 hover:bg-zinc-300 transition-all font-roboto"
               >
                 For Tradespeople
               </Link>

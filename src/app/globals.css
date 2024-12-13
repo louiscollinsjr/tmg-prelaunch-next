@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium text-white;
+    background: linear-gradient(135deg, #09a4a8 0%, #0ab5b9 50%, #09a4a8 100%);
+  }
+  
+  .btn:hover {
+    background:  #088387;
+  }
+  
+  .btn:active {
+   
+  }
+}
 
 .backdrop-blur {
   will-change: transform;
@@ -39,7 +52,7 @@
   content: '';
   position: absolute;
   inset: 2px;
-  background: #e4e4e7; /* zinc-200 */
+  background: #E4E2D3; /* zinc-200 */
   border-radius: 9999px;
   z-index: -1;
 }
@@ -55,6 +68,3 @@
     background-position: 0% 50%;
   }
 }
-
-
-

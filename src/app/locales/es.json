@@ -9,14 +9,14 @@
       "trusted": "de confianza",
       "end": "en minutos"
     },
-    "waitlist": "Únete a la lista de espera"
+    "waitlist": "Lista espera"
   },
   "professionals": {
     "hero": {
       "title": "Haz crecer tu negocio con",
       "titleHighlight": "TryMyGuys",
       "description": "Únete a nuestra red de profesionales de confianza y conéctate con clientes que buscan servicios de calidad. Obtén acceso a trabajos locales, administra tu horario y haz crecer tu negocio en tus términos.",
-      "waitlist": "Unirse a la lista de espera"
+      "waitlist": "Lista espera"
     },
     "scheduling": {
       "title": "Obtén el trabajo",
