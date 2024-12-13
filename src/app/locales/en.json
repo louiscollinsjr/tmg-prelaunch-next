@@ -1,4 +1,95 @@
 {
   "hello": "Hello",
-  "welcome": "Welcome to our site"
+  "welcome": "Welcome to our site",
+  "home": {
+    "launchDate": "Launching early 2025",
+    "title": {
+      "start": "Find",
+      "local": "local",
+      "trusted": "trusted tradespeople",
+      "end": "in minutes"
+    },
+    "waitlist": "Join waitlist"
+  },
+  "professionals": {
+    "hero": {
+      "title": "Grow your business with",
+      "titleHighlight": "TryMyGuys",
+      "description": "Join our network of trusted professionals and connect with customers looking for quality services. Get access to local jobs, manage your schedule, and grow your business on your terms.",
+      "waitlist": "Join waitlist"
+    },
+    "scheduling": {
+      "title": "Get the work",
+      "titleHighlight": "you want",
+      "titleEnd": "when you want it",
+      "description": "TryMyGuys connects trusted tradespeople with local job opportunities in minutes. Access the details you need, browse photos, and screen customers to make informed decisions before accepting a job.",
+      "features": {
+        "promote": "Promote your business locally",
+        "quotes": "Send quotes and schedule jobs",
+        "payments": "Grow a loyal local client base"
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "Choose the perfect plan for your business needs",
+      "perYear": "/year",
+      "tiers": {
+        "starter": {
+          "name": "Starter Kit",
+          "description": "Essential tools to kickstart your business",
+          "features": {
+            "profile": "Personal or Business Profile (1 Service Type)",
+            "description": "Brief Description",
+            "advertisement": "Online Advertisement",
+            "images": "Project Images",
+            "website": "Website",
+            "email": "Email Service",
+            "calendar": "Booking Calendar"
+          }
+        },
+        "pro": {
+          "name": "Pro Connect",
+          "description": "Get access high-quality projects",
+          "features": {
+            "profile": "Personal or Business Profile (3 Service Types)",
+            "access": "Access to Listed Projects (Up to 3 Service Types)",
+            "website": "Standard Website",
+            "description": "Brief Description",
+            "advertisement": "Online Advertisement",
+            "images": "6 Project Images",
+            "email": "Email Service",
+            "calendar": "Booking Calendar"
+          }
+        },
+        "master": {
+          "name": "Master Craftsman",
+          "description": "Stand out with priority access to premium projects",
+          "features": {
+            "profile": "Personal or Business Profile (6 Service Types)",
+            "access": "Access to Listed Projects (6 Service Types)",
+            "website": "Branded Website",
+            "description": "Brief Description",
+            "advertisement": "Online Advertisement",
+            "images": "12 Project Images",
+            "email": "Email Service",
+            "calendar": "Booking Calendar"
+          }
+        },
+        "elite": {
+          "name": "Elite Contractor",
+          "description": "Unlock exclusive jobs and Top-Tier Projects",
+          "features": {
+            "profile": "Personal or Business Profile (All Service Types)",
+            "access": "Access to All Listed Projects",
+            "website": "Custom Website",
+            "description": "Brief Description",
+            "advertisement": "Online Advertisement",
+            "images": "24 Project Images",
+            "email": "Email Service",
+            "calendar": "Booking Calendar"
+          }
+        }
+      }
+    }
+  }
 }

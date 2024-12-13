@@ -12,7 +12,7 @@ export default function PrelaunchNavigation() {
   const isProfessionalsPage = pathname.endsWith('/professionals');
 
   return (
-    <div className="bg-zinc-100 max-w-screen-8xl">
+    <div className="max-w-screen-8xl">
       <div className="mx-auto ~px-6/56 ~pt-6/8">
         <div className="flex h-24 justify-between ~pt-2/12">
           {/* Left side */}

@@ -1,4 +1,95 @@
 {
-  "hello": "Bonjour",
-  "welcome": "Bienvenue sur notre site"
+  "hello": "Hola",
+  "welcome": "Bienvenido a nuestro sitio",
+  "home": {
+    "launchDate": "Lanzamiento a principios de 2025",
+    "title": {
+      "start": "Encuentra",
+      "local": "profesionales",
+      "trusted": "de confianza",
+      "end": "en minutos"
+    },
+    "waitlist": "Únete a la lista de espera"
+  },
+  "professionals": {
+    "hero": {
+      "title": "Haz crecer tu negocio con",
+      "titleHighlight": "TryMyGuys",
+      "description": "Únete a nuestra red de profesionales de confianza y conéctate con clientes que buscan servicios de calidad. Obtén acceso a trabajos locales, administra tu horario y haz crecer tu negocio en tus términos.",
+      "waitlist": "Unirse a la lista de espera"
+    },
+    "scheduling": {
+      "title": "Obtén el trabajo",
+      "titleHighlight": "que quieres",
+      "titleEnd": "cuando lo quieras",
+      "description": "TryMyGuys conecta a profesionales de confianza con oportunidades de trabajo locales en minutos. Accede a los detalles que necesitas, explora fotos y evalúa a los clientes para tomar decisiones informadas antes de aceptar un trabajo.",
+      "features": {
+        "promote": "Promociona tu negocio localmente",
+        "quotes": "Envía presupuestos y programa trabajos",
+        "payments": "Desarrolla una base de clientes locales leales"
+      }
+    },
+    "pricing": {
+      "title": "Precios",
+      "subtitle": "Elige el plan perfecto para las necesidades de tu negocio",
+      "perYear": "/año",
+      "tiers": {
+        "starter": {
+          "name": "Kit de Inicio",
+          "description": "Herramientas esenciales para iniciar tu negocio",
+          "features": {
+            "profile": "Perfil Personal o de Negocio (1 Tipo de Servicio)",
+            "description": "Descripción Breve",
+            "advertisement": "Anuncio en Línea",
+            "images": "Imágenes de Proyectos",
+            "website": "Sitio Web",
+            "email": "Servicio de Correo",
+            "calendar": "Calendario de Reservas"
+          }
+        },
+        "pro": {
+          "name": "Conexión Pro",
+          "description": "Obtén acceso a proyectos de alta calidad",
+          "features": {
+            "profile": "Perfil Personal o de Negocio (3 Tipos de Servicios)",
+            "access": "Acceso a Proyectos Listados (Hasta 3 Tipos de Servicios)",
+            "website": "Sitio Web Estándar",
+            "description": "Descripción Breve",
+            "advertisement": "Anuncio en Línea",
+            "images": "6 Imágenes de Proyectos",
+            "email": "Servicio de Correo",
+            "calendar": "Calendario de Reservas"
+          }
+        },
+        "master": {
+          "name": "Maestro Artesano",
+          "description": "Destácate con acceso prioritario a proyectos premium",
+          "features": {
+            "profile": "Perfil Personal o de Negocio (6 Tipos de Servicios)",
+            "access": "Acceso a Proyectos Listados (6 Tipos de Servicios)",
+            "website": "Sitio Web de Marca",
+            "description": "Descripción Breve",
+            "advertisement": "Anuncio en Línea",
+            "images": "12 Imágenes de Proyectos",
+            "email": "Servicio de Correo",
+            "calendar": "Calendario de Reservas"
+          }
+        },
+        "elite": {
+          "name": "Contratista Elite",
+          "description": "Desbloquea trabajos exclusivos y proyectos de primer nivel",
+          "features": {
+            "profile": "Perfil Personal o de Negocio (Todos los Tipos de Servicios)",
+            "access": "Acceso a Todos los Proyectos Listados",
+            "website": "Sitio Web Personalizado",
+            "description": "Descripción Breve",
+            "advertisement": "Anuncio en Línea",
+            "images": "24 Imágenes de Proyectos",
+            "email": "Servicio de Correo",
+            "calendar": "Calendario de Reservas"
+          }
+        }
+      }
+    }
+  }
 }

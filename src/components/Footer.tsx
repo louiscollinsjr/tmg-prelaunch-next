@@ -11,10 +11,10 @@ export default function PrelaunchFooter() {
   };
 
   return (
-    <footer className="bg-zinc-100 text-gray-800 py-12 max-w-screen-8xl">
+    <footer className=" text-gray-800 py-12 max-w-screen-8xl">
       <div className="mx-auto ~px-6/56 ~pt-6/8">
         {/* Row 1 - Logo, Social Icons, and Contact */}
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 pb-8 border-b border-gray-200">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 pb-8 border-b-2 border-[#e1ddc9]">
           {/* Logo and Social Icons */}
           <div>
             <div className="~text-xl/3xl font-bebas-neue font-bold tracking-wide text-burnt-orange mb-4">
@@ -27,7 +27,7 @@ export default function PrelaunchFooter() {
                 priority
               />
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 ~pl-8/32">
               <a href="https://instagram.com/trymyguys" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-600 transition-colors">
                 <FaInstagram className="w-4 h-4" />
               </a>

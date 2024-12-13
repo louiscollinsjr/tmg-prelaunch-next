@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useI18n } from '../app/i18n/client';
 import WaitlistModal from './WaitlistModal';
 import AppStoreButtons from './AppStoreButtons';
+import Image from 'next/image';
 
 const backgroundIcons = [
   'broom', 'bug', 'couch', 'fan', 'lightning',
@@ -12,28 +14,31 @@ const backgroundIcons = [
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const t = useI18n();
 
   return (
     <>
       <div className="relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 z-10">
-          <div className="absolute  inset-0 grid grid-cols-6 md:grid-cols-6 lg:grid-cols-12 gap-2 opacity-[0.05]">
-            {Array.from({ length: 48 }).map((_, index) => {
+          <div className="absolute inset-0 grid grid-cols-6 md:grid-cols-6 lg:grid-cols-12 gap-2 opacity-[0.03]">
+            {Array.from({ length: 120 }).map((_, index) => {
               const iconName = backgroundIcons[index % backgroundIcons.length];
               return (
                 <div
                   key={index}
-                  className="w-6 h-6 transform rotate-12"
+                  className="w-12 h-12 transform rotate-12"
                   style={{
                     transform: `rotate(${Math.random() * 360}deg)`,
                   }}
                 >
-                  <img
-                    src={`/filterSVGs/${iconName}.svg`}
-                    alt=""
-                    className="w-full h-full"
-                  />
+                   <Image
+                   src={`/filterSVGs/${iconName}.svg`}
+                   alt="Background Icon"
+                   width={24}  // adjust based on your needs
+                   height={24} // adjust based on your needs
+                   className="w-full h-full"
+                 />
                 </div>
               );
             })}
@@ -59,11 +64,18 @@ export default function Hero() {
                 />
               </svg>
               <span className="text-xs md:text-sm tracking-wider">
-                Launching early 2025
+                {t('home.launchDate')}
               </span>
             </div>
             <h1 className="~text-5xl/7xl  md:~text-6xl/9xl tracking-tight font-bold text-slate-800 mb-4 w-[80%] md:w-full">
-              Find <span className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent">local</span>, <span className="inline-block bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent">trusted tradespeople</span>{" "}in minutes
+              {t('home.title.start')}{' '}
+              <span className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent">
+                {t('home.title.local')}
+              </span>, {' '}
+              <span className="inline-block bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent">
+                {t('home.title.trusted')}
+              </span>{' '}
+              {t('home.title.end')}
             </h1>
 
             {/* Action Buttons */}
@@ -72,8 +84,7 @@ export default function Hero() {
                 onClick={() => setIsModalOpen(true)}
                 className="inline-flex items-center justify-center ~px-5/10 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium text-white bg-burnt-orange rounded-full hover:bg-gray-700 transition-colors w-fit tracking-wider "
               >
-                Join waitlist{" "}
-
+                {t('home.waitlist')}
               </button>
             </div>
             <div className="sm:mt-16">
