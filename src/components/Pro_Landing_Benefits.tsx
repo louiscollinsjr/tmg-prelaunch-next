@@ -110,7 +110,7 @@ const benefits = [
 
 export default function Pro_Landing_Benefits() {
   return (
-    <div className="~px-8/56 ~mt-20/40">
+    <div className="~px-8/56 ~mt-20/30">
       <div className=" mx-auto md:px-[22px]">
         <div className="bg-gradient-to-br from-teal-600 to-teal-500 text-white py-20 rounded-3xl w-full max-w-screen-8xl">
           <div className="px-4 sm:px-6 lg:px-">
