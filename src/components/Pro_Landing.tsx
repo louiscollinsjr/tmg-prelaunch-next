@@ -6,6 +6,7 @@ import PricingTiers from '@/components/Pro_Landing_PricingTiers';
 import Pro_EarlyAccessCTA from '@/components/Pro_Landing_EarlyAccessCTA';
 
 import Pro_Landing_Benefits from './Pro_Landing_Benefits';
+import Pro_Landing_HowTo from './Pro_Landing_HowTo';
 
 export default function ProfessionalsPage() {
 
@@ -15,6 +16,7 @@ export default function ProfessionalsPage() {
         <ProfessionalHero />
         <PrelaunchScheduling />
         <Pro_Landing_Benefits />
+        <Pro_Landing_HowTo />
         <PricingTiers />
         <Pro_EarlyAccessCTA />
         </div>

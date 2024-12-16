@@ -112,10 +112,10 @@ export default function Pro_Landing_Benefits() {
   return (
     <div className="~px-8/56 ~mt-20/40">
       <div className=" mx-auto md:px-[22px]">
-        <div className="bg-gradient-to-br from-burnt-orange to-[rgb(255,88,22)] text-white py-20 rounded-3xl w-full max-w-screen-8xl">
+        <div className="bg-gradient-to-br from-teal-600 to-teal-500 text-white py-20 rounded-3xl w-full max-w-screen-8xl">
           <div className="px-4 sm:px-6 lg:px-">
             <div className="text-center mb-12">
-              <h2 className="~text-5xl/7xl  md:~text-6xl/9xl font-bold ~px-8/20 pt-2 mb-6 font-tiro-bangla tracking-wide md:pt-12">
+              <h2 className="~text-5xl/7xl  md:~text-6xl/9xl font-bold ~px-8/20 pt-2 mb-6 font-tiro-bangla tracking-wide md:pt-12 text-white">
                 Free to join. Easy to use.
               </h2>
               {/* <p className="~text-base/4xl max-w-80 md:max-w-6xl mx-auto md:pt-12 pt-8 ">
@@ -133,7 +133,7 @@ export default function Pro_Landing_Benefits() {
                   </div> */}
                   <div className="font-bold ~text-2xl/3xl md:~text-3xl/5xl mb-2">
                     <div className="~w-8/12 ~h-8/12 flex-shrink-0">
-                      {benefit.icon}
+                      {/* {benefit.icon} */}
                     </div>
                     <span>{benefit.name}</span>
                   </div>

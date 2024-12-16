@@ -111,7 +111,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
          <WaitlistSuccessModal onClose={handleClose} />
         ) : (
           <>
-            <h2 className="text-2xl font-bold mb-8 font-robototext-center tracking-wide">Join waitlist</h2>
+            <h2 className="text-2xl font-bold mb-8 font-roboto text-center tracking-wide">Join waitlist</h2>
 
             {submitStatus?.type === 'error' && (
               <div className="mb-4 p-4 rounded bg-red-50 text-red-800">
@@ -170,7 +170,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-fit flex justify-center py-4 px-8 border border-transparent shadow-sm text-base text-white font-bold rounded-full ${
+                  className={`w-fit flex justify-center py-4 px-8 border border-transparent shadow-sm text-base text-white font-bold rounded-full font-roboto text-center ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed'
                       : 'bg-burnt-orange hover:bg-burnt-orange-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-burnt-orange'

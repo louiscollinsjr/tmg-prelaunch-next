@@ -59,7 +59,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={lang}>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${fontVariables} bg-orange-50 min-h-screen flex flex-col font-montserrat`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${fontVariables} bg-zinc-100 min-h-screen flex flex-col font-montserrat`}>
         <I18nProvider locale={lang}>
           <Navigation />
           <main className="pt-16">{children}</main>

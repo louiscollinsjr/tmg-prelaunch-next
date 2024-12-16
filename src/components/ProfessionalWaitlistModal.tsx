@@ -227,7 +227,7 @@ export default function ProfessionalWaitlistModal({ isOpen, onClose }: Professio
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-fit flex justify-center py-4 px-8 border border-transparent shadow-sm text-base text-white font-bold rounded-full ${
+                  className={`w-fit flex justify-center py-4 px-8 border border-transparent shadow-sm text-base text-white font-bold rounded-full font-roboto ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed'
                       : 'bg-burnt-orange hover:bg-burnt-orange-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-burnt-orange'

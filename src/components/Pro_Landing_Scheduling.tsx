@@ -1,8 +1,11 @@
 'use client';
 
 import { useI18n } from '../app/i18n/client';
+import { useState } from 'react';
+import ProfessionalWaitlistModal from './ProfessionalWaitlistModal';
 
 export default function PrelaunchScheduling() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const t = useI18n();
 
   return (
@@ -40,16 +43,23 @@ export default function PrelaunchScheduling() {
               </li>
             </ul>
 
-            <button
+            <button  onClick={() => setIsModalOpen(true)}
           
               className=" inline-flex items-center  ~px-5/12 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium rounded-full bg-burnt-orange text-white hover:bg-opacity-90 transition-all"
             >
-              Grow your business
+              Join waitlist
              
             </button>
           </div>
         </div>
       </div>
+
+      <ProfessionalWaitlistModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+
+
     </div>
   );
 }
