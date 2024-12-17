@@ -34,7 +34,7 @@ export default function PrelaunchNavigation() {
 
             {/* Right side */}
             <div className="flex items-center pr-2">
-              <p className='hidden sm:block text-gray-600 px-4 text-xs'>Rolling out soon in <b>Dallas Fort Worth Texas</b> </p>
+              <p className='hidden sm:block text-gray-600 px-4 text-xs'>Rolling out soon in <b className='text-[#09A4A9]'>Dallas Fort Worth Texas</b> </p>
               {isProfessionalsPage ? (
                 <button
                   onClick={() => setIsModalOpen(true)}

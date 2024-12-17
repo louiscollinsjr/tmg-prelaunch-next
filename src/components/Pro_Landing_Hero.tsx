@@ -13,7 +13,7 @@ export default function ProfessionalHero() {
       <div className="mx-auto max-w-7xl py-8 ~pt-24/64 mx-auto">
         <div className="text-left sm:text-center flex flex-col items-start sm:items-center">
           <h1 className="~text-5xl/7xl md:~text-6xl/9xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25]"> 
-            {t('professionals.hero.title')} <span className="bg-gradient-to-r from-orange-gradient-start via-orange-gradient-via to-orange-gradient-end bg-clip-text text-transparent animate-gradient">{t('professionals.hero.titleHighlight')}</span> 
+            {t('professionals.hero.title')} <span className="bg-gradient-to-r from-[#F04E03]  via-[#0b67a8] to-[#09A4A9] bg-clip-text text-transparent animate-gradient">{t('professionals.hero.titleHighlight')}</span> 
           </h1>
           <p className="~mt-6/20 ~text-base/3xl leading-2 text-gray-500 w-[60%]">
             {t('professionals.hero.description')}
