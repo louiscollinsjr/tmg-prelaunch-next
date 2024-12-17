@@ -1,12 +1,10 @@
 'use client';
 
-import ProfessionalHero from '@/components/Pro_Landing_Hero';
-import PrelaunchScheduling from '@/components/Pro_Landing_Scheduling';
-import PricingTiers from '@/components/Pro_Landing_PricingTiers';
-import Pro_EarlyAccessCTA from '@/components/Pro_Landing_EarlyAccessCTA';
-
+import ProfessionalHero from './Pro_Landing_Hero';
 import Pro_Landing_Benefits from './Pro_Landing_Benefits';
 import Pro_Landing_HowTo from './Pro_Landing_HowTo';
+import PricingTiers from './Pro_Landing_PricingTiers';
+import Pro_EarlyAccessCTA from './Pro_Landing_EarlyAccessCTA';
 
 export default function ProfessionalsPage() {
 
