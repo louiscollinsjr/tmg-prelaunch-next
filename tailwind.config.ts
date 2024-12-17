@@ -26,7 +26,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'burnt-orange': '#FF5816',
-        'burnt-orange-dark': '#E54E14',
+        'burnt-orange-dark': '#E54E14', 
         'jason-aqua': '#51c4cb',
         primary: {
           DEFAULT: 'rgb(10, 122, 255)',
@@ -34,7 +34,8 @@ export default {
           light: 'rgb(86, 181, 254)'
         },
         'orange-gradient-start': '#ff4a27',
-        'orange-gradient-end': '#ff6827',
+        'orange-gradient-via': '#60a5fa',
+        'orange-gradient-end': '#0891b2',
       },
       fontFamily: {
         sans: ['var(--font-montserrat)'],

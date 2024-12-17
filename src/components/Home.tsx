@@ -67,12 +67,12 @@ export default function Hero() {
                 {t('home.launchDate')}
               </span>
             </div>
-            <h1 className="~text-5xl/7xl  md:~text-6xl/9xl tracking-tight font-bold text-slate-800 mb-4 w-[80%] md:w-full">
+            <h1 className="~text-5xl/7xl  md:~text-6xl/9xl tracking-tight font- text-slate-800 mb-4 w-[80%] md:w-full">
               {t('home.title.start')}{' '}
-              <span className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-start bg-clip-text text-transparent">
                 {t('home.title.local')}
               </span>, {' '}
-              <span className="inline-block bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent">
+              <span className="inline-block bg-gradient-to-r from-orange-gradient-start to-orange-gradient-start bg-clip-text text-transparent">
                 {t('home.title.trusted')}
               </span>{' '}
               {t('home.title.end')}
@@ -82,7 +82,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center justify-center ~px-5/10 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium text-white rounded-full w-fit tracking-wider bg-burnt-orange hover:bg-burnt-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burnt-orange"
+                className="inline-flex items-center justify-center ~px-5/10 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium text-white rounded-2xl w-fit tracking-wider bg-burnt-orange hover:bg-burnt-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burnt-orange"
               >
                 {t('home.waitlist')}
               </button>

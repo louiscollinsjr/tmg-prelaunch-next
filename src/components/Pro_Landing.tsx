@@ -14,9 +14,9 @@ export default function ProfessionalsPage() {
     <main className="flex min-h-screen flex-col  max-screen-w-8xl">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <ProfessionalHero />
-        <PrelaunchScheduling />
-        <Pro_Landing_Benefits />
         <Pro_Landing_HowTo />
+        {/* <PrelaunchScheduling /> */}
+        <Pro_Landing_Benefits />
         <PricingTiers />
         <Pro_EarlyAccessCTA />
         </div>

@@ -12,7 +12,7 @@ const benefits = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-full h-full"
       >
         <path
           strokeLinecap="round"
@@ -33,7 +33,7 @@ const benefits = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-full h-full"
       >
         <path
           strokeLinecap="round"
@@ -46,7 +46,7 @@ const benefits = [
   {
     name: "Build Your Reputation",
     description:
-      "Positive reviews and ratings from happy clients boost your credibility and attract more work.",
+      "Earn positive reviews to build credibility and attract more clients.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const benefits = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-full h-full"
       >
         <path
           strokeLinecap="round"
@@ -75,7 +75,7 @@ const benefits = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-full h-full"
       >
         <path
           strokeLinecap="round"
@@ -88,7 +88,7 @@ const benefits = [
   {
     name: "Save on Advertising",
     description:
-      "TryMyGuys markets your services without you spending extra money on ads or promotions.",
+      "TryMyGuys promotes your services at no extra cost.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ const benefits = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-full h-full"
       >
         <path
           strokeLinecap="round"
@@ -110,12 +110,12 @@ const benefits = [
 
 export default function Pro_Landing_Benefits() {
   return (
-    <div className="~px-8/56 ~mt-20/30">
+    <div className="~mt-20/30 pt-32">
       <div className=" mx-auto md:px-[22px]">
-        <div className="bg-gradient-to-br from-teal-600 to-teal-500 text-white py-20 rounded-3xl w-full max-w-screen-8xl">
-          <div className="px-4 sm:px-6 lg:px-">
+        <div className="bg-gradient-to-br text-black py-20 rounded-3xl w-full max-w-7xl mx-auto">
+          <div className="px-4 sm:px-6">
             <div className="text-center mb-12">
-              <h2 className="~text-5xl/7xl  md:~text-6xl/9xl font-bold ~px-8/20 pt-2 mb-6 font-tiro-bangla tracking-wide md:pt-12 text-white">
+              <h2 className="~text-4xl/6xl md:~text-5xl/7xl  tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-40 text-left md:text-center">
                 Free to join. Easy to use.
               </h2>
               {/* <p className="~text-base/4xl max-w-80 md:max-w-6xl mx-auto md:pt-12 pt-8 ">
@@ -125,19 +125,19 @@ export default function Pro_Landing_Benefits() {
               </p> */}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16 items-center justify-center mx-auto md:~mt-24/28 ~px-8/32 max-w-9xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center justify-center mx-auto md:~mt-24/28 max-w-9xl">
               {benefits.map((benefit) => (
-                <div key={benefit.name} className="text-left">
+                <div key={benefit.name} className="text-left bg-gray-200 p-10 py-12 rounded-3xl min-h-80 ">
                   {/* <div className="~w-10/40 ~h-10/40 mx-auto mb-2 flex items-center justify-center">
                     {benefit.icon}
-                  </div> */}
-                  <div className="font-bold ~text-2xl/3xl md:~text-3xl/5xl mb-2">
-                    <div className="~w-8/12 ~h-8/12 flex-shrink-0">
-                      {/* {benefit.icon} */}
+                  </div>  */}
+                  <div className="~text-xl/2xl md:text-2xl mb-2">
+                    <div className="~w-12/16 ~h-12/16 flex-shrink-0 bg-black rounded-full p-2 text-white mb-4">
+                      {benefit.icon}
                     </div>
                     <span>{benefit.name}</span>
                   </div>
-                  <p className="text-white/80 ~text-base/4xl max-w-96">
+                  <p className="text-black/50 ~text-base/2xl max-w-96">
                     {benefit.description}
                   </p>
                 </div>

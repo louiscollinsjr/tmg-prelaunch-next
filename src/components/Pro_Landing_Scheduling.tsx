@@ -13,11 +13,11 @@ export default function PrelaunchScheduling() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           
-          <div className=" w-full h-[780px] rounded-xl bg-cover bg-left-top bg-no-repeat" style={{ backgroundImage: 'url("/images/plumber.jpeg")' }}></div>
+          <div className="  h-[780px] rounded-xl bg-cover bg-left-top bg-no-repeat" style={{ backgroundImage: 'url("/images/plumber.jpeg")' }}></div>
 
           <div className="space-y-6 md:pl-24">
-            <h2 className="~text-5xl/7xl  md:~text-6xl/9xl tracking-tight font-bold text-slate-800">
-              {t('professionals.scheduling.title')} <span className="text-burnt-orange">{t('professionals.scheduling.titleHighlight')}</span> {t('professionals.scheduling.titleEnd')}
+            <h2 className="~text-4xl/6xl md:~text-6xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25]">
+              {t('professionals.scheduling.title')} <span className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-start bg-clip-text text-transparent">{t('professionals.scheduling.titleHighlight')}</span> {t('professionals.scheduling.titleEnd')}
             </h2>
             <p className="text-gray-600 ~text-base/3xl max-w-5xl py-12">
               {t('professionals.scheduling.description')}
@@ -45,7 +45,7 @@ export default function PrelaunchScheduling() {
 
             <button  onClick={() => setIsModalOpen(true)}
           
-              className=" inline-flex items-center  ~px-5/12 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium rounded-full bg-burnt-orange text-white hover:bg-opacity-90 transition-all"
+              className="rounded-2xl bg-burnt-orange ~px-5/10 ~py-4/8 ~text-base/2xl md:~text-3xl/5xl text-white shadow-sm hover:bg-burnt-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burnt-orange font-roboto"
             >
               Join waitlist
              

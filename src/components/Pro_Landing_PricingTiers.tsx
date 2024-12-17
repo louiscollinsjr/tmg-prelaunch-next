@@ -86,16 +86,16 @@ export default function PricingTiers() {
     <>
       <ProfessionalWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="py-64">
-        <div className="mx-auto px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto text-center">
-            <h2 className="~text-5xl/7xl md:~text-6xl/9xl font-bold tracking-tight text-slate-800">
+            <h2 className="~text-4xl/6xl md:~text-5xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-12 text-left md:text-center">
               Pricing
             </h2>
-            <p className="~mt-6/16 ~text-lg/2xl leading-8 text-gray-600">
-              Choose the perfect plan for your business needs
+            <p className="~mt-6/16 ~text-lg/2xl leading-8 text-gray-600 mb-32">
+            Find the perfect plan to suit your business needs.
             </p>
           </div>
-          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-8 lg:mx-0  lg:grid-cols-4 lg:gap-x-8">
+          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-8 lg:mx-0  lg:grid-cols-2 lg:gap-x-8">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
@@ -121,9 +121,9 @@ export default function PricingTiers() {
                 </p>
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className={`mt-6 block w-fit rounded-full ~px-5/14 ~py-4/5 ~text-base/2xl md:~text-2xl/3xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-roboto ${
+                  className={`mt-6 block w-fit rounded-2xl ~px-5/14 ~py-4/5 ~text-base/2xl md:~text-2xl/3xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-roboto ${
                     tier.highlight
-                      ? 'bg-burnt-orange text-white hover:bg-opacity-90'
+                      ? 'bg-black text-white hover:bg-opacity-90'
                       : 'bg-zinc-200 text-slate-800 hover:bg-zinc-300'
                   }`}
                 >
