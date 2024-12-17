@@ -99,8 +99,8 @@ export default function ProfessionalWaitlistModal({ isOpen, onClose, tierName }:
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-zinc-100 rounded-2xl max-w-md w-full p-8 relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center justify-center p-4">
+      <div className="bg-zinc-100 rounded-2xl max-w-md w-full p-8 relative transform translate-y-0">
         <button
           onClick={handleClose}
           className="absolute top-6 right-6 text-gray-500 hover:text-gray-700 bg-zinc-200 rounded-full p-2 hover:bg-zinc-300 transition-colors"
