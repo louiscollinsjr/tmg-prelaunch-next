@@ -95,10 +95,10 @@ export default function PricingTiers() {
         onClose={() => setIsModalOpen(false)}
         tierName={selectedTier || undefined}
       />
-      <div className="py-64">
-        <div className="mx-auto px-6 lg:px-8 max-w-8xl">
-          <div className="mx-auto text-center">
-            <h2 className="~text-4xl/6xl md:~text-5xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-12 text-left md:text-center">
+      <div className="py-24">
+        <div className="mx-auto px-6 lg:px-8 max-w-8xl ">
+          <div className="mx-auto text-center ">
+            <h2 className=" ~text-4xl/6xl md:~text-5xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-12 text-left md:text-center max-w-7xl border-t-2 border-gray-200 mx-auto pt-24">
               Pricing
             </h2>
             <p className="~mt-6/16 ~text-lg/2xl leading-8 text-gray-600 mb-32">

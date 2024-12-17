@@ -10,9 +10,10 @@ export default function PrelaunchNavigation() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
   const isProfessionalsPage = pathname.endsWith('/professionals');
+  const isHomePage = pathname === '/';
 
   return (
-    <div className="max-w-screen-8xl">
+    <div className={`fixed top-0 left-0 right-0 z-50 max-w-screen-8xl pb-16 ${!isHomePage ? 'backdrop-blur-sm bg-zinc-100/50' : ''}`}>
       <div className="mx-auto ~px-6/56 ~pt-6/8">
         <div className="flex h-24 justify-between ~pt-2/12">
           {/* Left side */}
@@ -31,6 +32,7 @@ export default function PrelaunchNavigation() {
 
           {/* Right side */}
           <div className="flex items-center pr-2">
+            <p className='hidden sm:block text-gray-600 px-4 text-xs'>Rolling out soon in <b>Dallas Fort Worth Texas</b> </p>
             {isProfessionalsPage ? (
               <button
                 onClick={() => setIsModalOpen(true)}
