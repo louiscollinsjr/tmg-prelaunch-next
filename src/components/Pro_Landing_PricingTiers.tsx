@@ -81,12 +81,22 @@ const pricingTiers: PricingTier[] = [
 
 export default function PricingTiers() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState<string | null>(null);
+
+  const handleTierClick = (tierName: string) => {
+    setSelectedTier(tierName);
+    setIsModalOpen(true);
+  };
 
   return (
     <>
-      <ProfessionalWaitlistModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ProfessionalWaitlistModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)}
+        tierName={selectedTier || undefined}
+      />
       <div className="py-64">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+        <div className="mx-auto px-6 lg:px-8 max-w-8xl">
           <div className="mx-auto text-center">
             <h2 className="~text-4xl/6xl md:~text-5xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-12 text-left md:text-center">
               Pricing
@@ -95,13 +105,13 @@ export default function PricingTiers() {
             Find the perfect plan to suit your business needs.
             </p>
           </div>
-          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-8 lg:mx-0  lg:grid-cols-2 lg:gap-x-8">
+          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-16 lg:mx-0 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-16">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`rounded-3xl p-8 ring-1 ring-gray-200 ${
+                className={`rounded-3xl p-8 ring-1 ring-gray-200 relative ${
                   tier.highlight
-                    ? 'bg-white shadow-xl ring-2 ring-burnt-orange'
+                    ? 'bg-white shadow-xl ring-2 ring-burnt-orange before:absolute before:-inset-1 before:blur-xl before:bg-gradient-to-br before:from-green-400/40 before:via-teal-600/40 before:to-orange-400/40 before:-z-10'
                     : 'bg-white/60'
                 }`}
               >
@@ -120,7 +130,7 @@ export default function PricingTiers() {
                   </span>
                 </p>
                 <button
-                  onClick={() => setIsModalOpen(true)}
+                  onClick={() => handleTierClick(tier.name)}
                   className={`mt-6 block w-fit rounded-2xl ~px-5/14 ~py-4/5 ~text-base/2xl md:~text-2xl/3xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-roboto ${
                     tier.highlight
                       ? 'bg-black text-white hover:bg-opacity-90'

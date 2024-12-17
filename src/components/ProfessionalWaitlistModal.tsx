@@ -7,6 +7,7 @@ import WaitlistSuccessModal from './WaitlistSuccessModal';
 interface ProfessionalWaitlistModalProps {
   isOpen: boolean;
   onClose: () => void;
+  tierName?: string;
 }
 
 interface FormData {
@@ -19,7 +20,7 @@ interface FormData {
   customTrade: string;
 }
 
-export default function ProfessionalWaitlistModal({ isOpen, onClose }: ProfessionalWaitlistModalProps) {
+export default function ProfessionalWaitlistModal({ isOpen, onClose, tierName }: ProfessionalWaitlistModalProps) {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -51,7 +52,8 @@ export default function ProfessionalWaitlistModal({ isOpen, onClose }: Professio
         body: JSON.stringify({
           ...formData,
           trade: formData.trade === 'Other' && formData.customTrade ? formData.customTrade : formData.trade,
-          isProfessional: true
+          isProfessional: true,
+          ...(tierName && { tierName }),
         }),
       });
 
@@ -227,10 +229,10 @@ export default function ProfessionalWaitlistModal({ isOpen, onClose }: Professio
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-fit flex justify-center py-4 px-8 border border-transparent shadow-sm text-base text-white font-bold rounded-full font-roboto ${
+                  className={`w-fit flex justify-center py-4 px-8 border border-transparent shadow-sm text-xl bg-black text-white font-bold rounded-2xl font-roboto ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed'
-                      : 'bg-burnt-orange hover:bg-burnt-orange-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-burnt-orange'
+                      : 'bg-blackfocus:outline-none focus:ring-2 focus:ring-offset-2'
                   }`}
                 >
                   {isSubmitting ? 'Joining...' : 'Join waitlist'}

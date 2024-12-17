@@ -7,6 +7,7 @@ export interface IWaitlist extends Document {
   postCode?: string;
   isTradesman: boolean;
   trade?: string;
+  tierName?: string;
   createdAt: Date;
   status: 'pending' | 'contacted' | 'converted';
 }
@@ -18,6 +19,7 @@ const WaitlistSchema = new Schema({
   postCode: { type: String },
   isTradesman: { type: Boolean, default: false },
   trade: { type: String },
+  tierName: { type: String },
   createdAt: { type: Date, default: Date.now },
   status: { type: String, enum: ['pending', 'contacted', 'converted'], default: 'pending' }
 });

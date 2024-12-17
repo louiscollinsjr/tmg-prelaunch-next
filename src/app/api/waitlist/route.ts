@@ -5,7 +5,7 @@ import Waitlist from '@/lib/models/Waitlist';
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, phone, postCode, isTradesman, trade } = body;
+    const { name, email, phone, postCode, isTradesman, trade, tierName } = body;
 
     if (!name || !email) {
       return NextResponse.json(
@@ -33,6 +33,7 @@ export async function POST(req: Request) {
       postCode,
       isTradesman,
       trade,
+      tierName,
       status: 'pending'
     });
 

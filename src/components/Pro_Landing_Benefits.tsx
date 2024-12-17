@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
+import ProfessionalWaitlistModal from "./ProfessionalWaitlistModal";
+
 const benefits = [
   {
     name: "Steady Work",
     description:
-      "Get a constant stream of job opportunities without needing to search for clients.",
+      "Enjoy a steady flow of job opportunities—no client searching needed.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +70,7 @@ const benefits = [
   {
     name: "Easy Job Matching",
     description:
-      "The platform connects you with projects that fit your skills and availability.",
+      "Get matched with projects that align with your skills and schedule",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +91,7 @@ const benefits = [
   {
     name: "Save on Advertising",
     description:
-      "TryMyGuys promotes your services at no extra cost.",
+      "We promote your services at no extra cost.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -109,35 +112,33 @@ const benefits = [
 ];
 
 export default function Pro_Landing_Benefits() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="~mt-20/30 pt-32">
       <div className=" mx-auto md:px-[22px]">
         <div className="bg-gradient-to-br text-black py-20 rounded-3xl w-full max-w-7xl mx-auto">
           <div className="px-4 sm:px-6">
             <div className="text-center mb-12">
-              <h2 className="~text-4xl/6xl md:~text-5xl/7xl  tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-40 text-left md:text-center">
+              <h2 className="~text-4xl/6xl md:~text-5xl/7xl  tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-10 text-left md:text-center">
                 Free to join. Easy to use.
               </h2>
-              {/* <p className="~text-base/4xl max-w-80 md:max-w-6xl mx-auto md:pt-12 pt-8 ">
-                Unlike other platforms, with TryMyGuys there&#39;s no sign-up
-                cost, no service fees on completed jobs. Oh, and you get your
-                first month free.
-              </p> */}
+              <p className="~mt-6/20 ~text-base/2xl leading-2 text-gray-500 w-[80%] text-center mx-auto md:mb-40">Discover a hassle-free way to grow your business. With free signup and an easy-to-use platform, <button onClick={() => setIsModalOpen(true)} className="text-teal-600 hover:text-teal-700 font-medium cursor-pointer">Join the waitlist!</button></p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center justify-center mx-auto md:~mt-24/28 max-w-9xl">
               {benefits.map((benefit) => (
-                <div key={benefit.name} className="text-left bg-gray-200 p-10 py-12 rounded-3xl min-h-80 ">
+                <div key={benefit.name} className="text-left bg-white p-10 py-12 rounded-3xl min-h-80 ">
                   {/* <div className="~w-10/40 ~h-10/40 mx-auto mb-2 flex items-center justify-center">
                     {benefit.icon}
                   </div>  */}
                   <div className="~text-xl/2xl md:text-2xl mb-2">
-                    <div className="~w-12/16 ~h-12/16 flex-shrink-0 bg-black rounded-full p-2 text-white mb-4">
+                    <div className="~w-12/16 ~h-12/16 flex-shrink-0 bg-teal-600 rounded-full p-2 text-teal-100 mb-4">
                       {benefit.icon}
                     </div>
                     <span>{benefit.name}</span>
                   </div>
-                  <p className="text-black/50 ~text-base/2xl max-w-96">
+                  <p className="text-black/50 ~text-base/xl max-w-96">
                     {benefit.description}
                   </p>
                 </div>
@@ -146,6 +147,10 @@ export default function Pro_Landing_Benefits() {
           </div>
         </div>
       </div>
+      <ProfessionalWaitlistModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }
