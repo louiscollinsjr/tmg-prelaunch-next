@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../../app/globals.css";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { fontVariables } from '@/config/fonts';
 import I18nProvider from '@/components/I18nProvider';
+import CookieConsent from '@/components/CookieConsent';
 
 const metadataBase = 'https://trymyguys.com';
 
@@ -52,11 +52,7 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630,
       alt: 'Try My Guys - Professional Home Services'
-    }],
-    locales: {
-      'en_US': '/en',
-      'es_ES': '/es'
-    }
+    }]
   },
   twitter: {
     card: 'summary_large_image',  // This is correct as is in your code
@@ -82,15 +78,6 @@ export const metadata: Metadata = {
   category: 'Home Services',
 }
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export async function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }];
@@ -108,11 +95,15 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={lang}>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${fontVariables} bg-zinc-100 min-h-screen flex flex-col font-montserrat`}>
+      <head>
+        <link rel="manifest" href={`/${lang}/manifest.json`} />
+      </head>
+      <body className={`${fontVariables} min-h-screen flex flex-col font-roboto`}>
         <I18nProvider locale={lang}>
           <Navigation />
           <main className="pt-0">{children}</main>
           <Footer />
+          <CookieConsent />
         </I18nProvider>
       </body>
     </html>
