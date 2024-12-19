@@ -134,10 +134,10 @@ export default function Pro_Landing_HowTo() {
                 {/* Left side - Content */}
                 <div className="order-2 md:order-1">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="~w-10/14 ~h-10/14">{step.icon}</div>
-                    <div className="text-gray-500 font-medium">
+                    <div className="~w-4/8 ~h-4/8 text-[#F04E03]">{step.icon}</div>
+                    {/* <div className="text-gray-500 font-medium">
                       Step {step.number}
-                    </div>
+                    </div> */}
                   </div>
 
                   <h3 className="~text-xl/2xl md:~text-2xl/3xl mb-4">
@@ -152,9 +152,9 @@ export default function Pro_Landing_HowTo() {
                 {/* Right side - Image placeholder */}
                 <div
                   key={index}
-                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-top p-8 relative overflow-hidden order-1 md:order-2 aspect-video rounded-0`}
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-top p-8 relative overflow-hidden order-1 md:order-2 rounded-xl aspect-video rounded-0 bg-[#09A4A9]`}
                   style={{
-                    backgroundImage: `url(${step.background})`,
+                    // backgroundImage: `url(${step.background})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     opacity: 1,

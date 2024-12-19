@@ -150,7 +150,7 @@ export default function Pro_Landing_Benefits() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center justify-center mx-auto md:~mt-24/28 max-w-9xl">
               {benefits.map((benefit) => (
-                <div key={benefit.name} className="text-left bg-white p-10 py-12 rounded-3xl sm:min-h-80 ">
+                <div key={benefit.name} className="text-left bg-white p-10 py-12 sm:min-h-80 ">
                   {/* <div className="~w-10/40 ~h-10/40 mx-auto mb-2 flex items-center justify-center">
                     {benefit.icon}
                   </div>  */}
