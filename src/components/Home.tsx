@@ -4,13 +4,10 @@ import { useState } from 'react';
 import { useI18n } from '../app/i18n/client';
 import WaitlistModal from './WaitlistModal';
 import AppStoreButtons from './AppStoreButtons';
-import Image from 'next/image';
 
-const backgroundIcons = [
-  'broom', 'bug', 'couch', 'fan', 'lightning',
-  'paint-brush-broad', 'pipe', 'screwdriver', 'toolbox',
-  'tree', 'wrench'
-];
+import BackgroundPattern from './BackgroundPattern';
+
+
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,32 +15,9 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 z-10">
-          <div className="absolute inset-0 grid grid-cols-6 md:grid-cols-6 lg:grid-cols-12 gap-2 opacity-[0.03]">
-            {Array.from({ length: 120 }).map((_, index) => {
-              const iconName = backgroundIcons[index % backgroundIcons.length];
-              return (
-                <div
-                  key={index}
-                  className="w-12 h-12 transform rotate-12"
-                  style={{
-                    transform: `rotate(${Math.random() * 360}deg)`,
-                  }}
-                >
-                   <Image
-                   src={`/filterSVGs/${iconName}.svg`}
-                   alt="Background Icon"
-                   width={24}  // adjust based on your needs
-                   height={24} // adjust based on your needs
-                   className="w-full h-full"
-                 />
-                </div>
-              );
-            })}
-          </div>
-        </div>
+    <div className="relative isolate px-6  max-h-[70%] lg:min-h-[80vh] py-32 pb-8">
+      {/* Add the background pattern */}
+       <BackgroundPattern opacity="0.05" />
 
         <main className="relative z-10 max-w-7xl mx-auto p-8 sm:px-6 lg:px-8 min-h-[calc(80vh-64px)] text-left sm:text-center flex flex-col justify-center font-roboto ">
           {/* Main Content */}

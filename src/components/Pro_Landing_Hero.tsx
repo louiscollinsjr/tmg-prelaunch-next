@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useI18n } from '../app/i18n/client';
 import ProfessionalWaitlistModal from './ProfessionalWaitlistModal';
+import BackgroundPattern from './BackgroundPattern';
 
 export default function ProfessionalHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,6 +11,10 @@ export default function ProfessionalHero() {
 
   return (
     <div className="relative isolate px-6 lg:min-h-[80vh] py-32 pb-8">
+       {/* Add the background pattern */}
+       <BackgroundPattern  />
+
+
       <div className="mx-auto max-w-7xl py-8 ~pt-24/64 mx-auto">
         <div className="text-left sm:text-center flex flex-col items-start sm:items-center">
           <h1 className="~text-5xl/7xl md:~text-6xl/9xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25]"> 
