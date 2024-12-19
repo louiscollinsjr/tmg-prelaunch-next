@@ -5,7 +5,7 @@ import ProfessionalWaitlistModal from "./ProfessionalWaitlistModal";
 import Image from "next/image";
 
 const getRandomInterval = () => {
-  return Math.floor(Math.random() * (8000 - 5000 + 1) + 5000); // Random between 5000-8000ms
+  return Math.floor(Math.random() * (10000 - 6000 + 1) + 6000); // Random between 5000-8000ms
 };
 
 const steps = [
@@ -14,7 +14,7 @@ const steps = [
     title: "Share Your Expertise",
     description:
       "Tell us about your services, certifications, and availability. This helps us match you with homeowners seeking your skills.",
-    background: "/gradient01.png",
+    background: "/gradient08.png",
     images: ["/step01.png"],
     icon: (
       <svg
@@ -38,8 +38,8 @@ const steps = [
     title: "Get Matched with Projects",
     description:
       "Our system connects you with tailored opportunities based on your profile. Browse detailed requests and choose projects that fit your business.",
-    background: "/gradient02.png",
-    images: ["/step02.png", "/step02-2.png"],
+    background: "/gradient09.png",
+    images: ["/step02.png", "/step02-2.png",  "/step02-3.png"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const steps = [
     title: "Connect and Grow",
     description:
       "Communicate directly with homeowners, manage projects, and build your business with confidence—all through our platform.",
-    background: "/gradient03.png",
+    background: "/gradient04.png",
     images: ["/step03.png"],
     icon: (
       <svg
@@ -152,7 +152,7 @@ export default function Pro_Landing_HowTo() {
                 {/* Right side - Image placeholder */}
                 <div
                   key={index}
-                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-top p-8 relative overflow-hidden order-1 md:order-2 aspect-video rounded-xl`}
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-top p-8 relative overflow-hidden order-1 md:order-2 aspect-video rounded-0`}
                   style={{
                     backgroundImage: `url(${step.background})`,
                     backgroundSize: "cover",
