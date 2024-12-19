@@ -101,11 +101,11 @@ export default function PricingTiers() {
             <h2 className=" ~text-4xl/6xl md:~text-5xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-12 text-left md:text-center max-w-7xl border-t-2 border-gray-200 mx-auto pt-24">
               Pricing
             </h2>
-            <p className="~mt-6/16 ~text-lg/2xl leading-8 text-gray-600 mb-32">
+            <p className="~mt-6/16 ~text-lg/2xl text-gray-600 md:mb-32 text-left md:text-center">
             Find the perfect plan to suit your business needs.
             </p>
           </div>
-          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-16 lg:mx-0 md:grid-cols-2 xl:grid-cols-4 lg:gap-x-16">
+          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-16 lg:mx-0 md:grid-cols-2 2xl:grid-cols-4 lg:gap-x-16">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
@@ -115,14 +115,17 @@ export default function PricingTiers() {
                     : 'bg-white/60'
                 }`}
               >
-                <h3 className="~text-lg/4xl font-semibold leading-8 text-gray-900">
-                  {tier.name}
-                </h3>
-                <p className="mt-4 ~text-sm/2xl leading-6 text-gray-600">
-                  {tier.description}
-                </p>
+                {/* Title and description container with fixed height */}
+                <div className=" sm:~h-16/36">
+                  <h3 className="~text-lg/4xl font-semibold leading-8 text-gray-900">
+                    {tier.name}
+                  </h3>
+                  <p className="mt-4 ~text-sm/2xl leading-6 text-gray-600 line-clamp-3">
+                    {tier.description}
+                  </p>
+                </div>
                 <p className="mt-6 flex items-baseline gap-x-1">
-                  <span className="~text-4xl/7xl font-bold tracking-tight text-gray-900">
+                  <span className="text-3xl md:~text-xl/4xl 2xl:~text-4xl/7xl font-bold tracking-tight text-gray-900">
                     ${tier.price}
                   </span>
                   <span className="~text-sm/4xl font-semibold leading-6 text-gray-600">
@@ -131,7 +134,7 @@ export default function PricingTiers() {
                 </p>
                 <button
                   onClick={() => handleTierClick(tier.name)}
-                  className={`mt-6 block w-fit rounded-full ~px-5/14 ~py-4/5 ~text-base/2xl md:~text-2xl/3xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-roboto ${
+                  className={`mt-6 block w-fit rounded-full ~px-5/14 ~py-4/5 ~text-base/2xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-roboto ${
                     tier.highlight
                       ? 'bg-black text-white hover:bg-opacity-90'
                       : 'bg-zinc-200 text-slate-800 hover:bg-zinc-300'

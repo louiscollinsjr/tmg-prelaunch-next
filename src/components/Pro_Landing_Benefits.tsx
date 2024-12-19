@@ -148,19 +148,19 @@ export default function Pro_Landing_Benefits() {
               <p className="~mt-6/20 ~text-base/3xl leading-2 text-gray-500 text-left w-[90%] sm:w-[80%] sm:text-center mx-auto md:mb-32">Discover a hassle-free way to grow your business. With free signup and an easy-to-use platform.  <button onClick={() => setIsModalOpen(true)} className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent  font-medium cursor-pointer">Join the waitlist! {' '} </button></p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center justify-center mx-auto md:~mt-24/28 max-w-9xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center justify-center mx-auto md:~mt-24/28 max-w-9xl bg-white/40 rounded-xl">
               {benefits.map((benefit) => (
-                <div key={benefit.name} className="text-left bg-white/4 p-10 py-12 sm:min-h-80 border-b border-orange-gradient-start border-b-8 ">
+                <div key={benefit.name} className="text-left bg-white/4 p-10 py-12 sm:min-h-80 ">
                   {/* <div className="~w-10/40 ~h-10/40 mx-auto mb-2 flex items-center justify-center">
                     {benefit.icon}
                   </div>  */}
-                  <div className="~text-xl/2xl md:text-2xl mb-2">
-                    <div className="~w-12/16 ~h-12/16 flex-shrink-0 bg-[#09A4A9] rounded-full p-2 text-teal-100 mb-4">
+                  <div className="~text-xl/xl md:text-xl mb-2">
+                    <div className="~w-12/16 ~h-12/16 flex-shrink-0 bg-[#09A4A9] rounded-full p-2 text-teal-100 mb-8">
                       {benefit.icon}
                     </div>
                     <span>{benefit.name}</span>
                   </div>
-                  <p className="text-black/50 ~text-base/xl max-w-96">
+                  <p className="text-black/50 ~text-base/lg max-w-96">
                     {benefit.description}
                   </p>
                 </div>
