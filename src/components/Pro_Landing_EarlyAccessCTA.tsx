@@ -30,13 +30,13 @@ export default function Pro_EarlyAccessCTA() {
         <span className="text-gray-600">Launching early 2025</span>
       </div>
       
-      <h2 className="~text-4xl/6xl md:~text-5xl/7xl  tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-40 text-left md:text-left">
+      <h2 className="~text-4xl/6xl md:~text-5xl/7xl  tracking-tight font-medium text-slate-800 leading-[1.6] sm:leading-[1.5] mb-40 text-left md:text-left">
         Sign up today to get early access to <span className="text-burnt-orange">local jobs</span>
       </h2>
 
       <button
         onClick={() => setIsModalOpen(true)}
-        className="bg-black ~px-5/10 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium text-white  rounded-2xl hover:bg-opacity-90 transition-all flex items-center gap-2 font-roboto"
+        className="bg-black ~px-5/10 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium text-white  rounded-full hover:bg-opacity-90 transition-all flex items-center gap-2 font-roboto"
       >
         Join waitlist
        

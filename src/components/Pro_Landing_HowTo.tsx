@@ -125,26 +125,26 @@ export default function Pro_Landing_HowTo() {
             </button>
           </p>
 
-          <div className="grid grid-cols-1 gap-24">
+          <div className="grid grid-cols-1 gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="grid grid-cols-1 md:grid-cols-2 gap-12 items-top bg-white/30 rounded-xl p-8"
+                className="grid grid-cols-1 md:grid-cols-2 gap-20 items-top bg-white/0 rounded-xl p-8"
               >
                 {/* Left side - Content */}
                 <div className="order-2 md:order-1">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="~w-4/8 ~h-4/8 text-[#F04E03]">{step.icon}</div>
+                    {/* <div className="~w-4/8 ~h-4/8 text-[#F04E03]">{step.icon}</div> */}
                     {/* <div className="text-gray-500 font-medium">
                       Step {step.number}
                     </div> */}
                   </div>
 
-                  <h3 className="~text-xl/2xl md:~text-2xl/3xl mb-4">
+                  <h3 className="~text-xl/2xl md:~text-2xl mb-4">
                     Step {step.number} : {step.title}
                   </h3>
 
-                  <p className="~text-base/xl max-w-96 text-gray-600">
+                  <p className="~text-base/xl  text-gray-600">
                     {step.description}
                   </p>
                 </div>
@@ -152,22 +152,33 @@ export default function Pro_Landing_HowTo() {
                 {/* Right side - Image placeholder */}
                 <div
                   key={index}
-                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-top p-8 relative overflow-hidden order-1 md:order-2 rounded-xl aspect-video rounded-0 bg-[#09A4A9]`}
-                  style={{
-                    // backgroundImage: `url(${step.background})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    opacity: 1,
-                  }}
+                  className="relative aspect-video rounded overflow-hidden order-1 md:order-2"
                 >
-                  <div className="opacity-100">
-                    <Image
-                      src={step.images[currentImages[index]]}
-                      alt={`Step ${step.number}: ${step.title}`}
-                      fill
-                      className="object-contain"
-                      priority
-                    />
+                  {/* Background with blur */}
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      backgroundImage: `url(${step.background})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      filter: 'blur(8px)',
+                      transform: 'scale(1.1)', // Prevent blur edges from showing
+                    }}
+                  />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-[#09A4A9]/10 backdrop-blur-sm" />
+                  
+                  {/* Content container */}
+                  <div className="relative z-10 h-full w-full p-8">
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={step.images[currentImages[index]]}
+                        alt={`Step ${step.number}: ${step.title}`}
+                        fill
+                        className="object-contain"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
