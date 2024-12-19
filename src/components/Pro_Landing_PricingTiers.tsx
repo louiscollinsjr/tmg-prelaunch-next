@@ -105,7 +105,7 @@ export default function PricingTiers() {
             Find the perfect plan to suit your business needs.
             </p>
           </div>
-          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-16 lg:mx-0 md:grid-cols-2 2xl:grid-cols-4 lg:gap-x-16">
+          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-8 gap-y-16 lg:mx-0 md:grid-cols-2 2xl:grid-cols-4 lg:gap-x-16">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}

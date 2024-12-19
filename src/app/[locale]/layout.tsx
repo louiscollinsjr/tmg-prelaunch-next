@@ -6,30 +6,80 @@ import Footer from "../../components/Footer";
 import { fontVariables } from '@/config/fonts';
 import I18nProvider from '@/components/I18nProvider';
 
+const metadataBase = 'https://trymyguys.com';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(metadataBase),
   title: {
     template: '%s | Try My Guys',
     default: 'Try My Guys - Find and Book Trusted Local Service Providers',
   },
-  description: 'Find and book trusted local service providers for all your home service needs',
-  keywords: ['home services', 'local services', 'service providers', 'booking platform'],
+  description: 'Find and book trusted local service providers for all your home service needs. Connect with professional contractors and get your home projects done right.',
+  keywords: [
+    'home services',
+    'local services',
+    'service providers',
+    'home maintenance',
+    'professional contractors',
+    'handyman services',
+    'home repair',
+    'local contractors',
+    'skilled trades',
+    'home improvement'
+  ],
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en',
+      'es-ES': '/es'
+    }
+  },
+  verification: {
+    google: 'Add-your-google-verification-code',
+  },
+  authors: [{ name: 'Try My Guys' }],
+  creator: 'Try My Guys',
+  publisher: 'Try My Guys',
   openGraph: {
     title: 'Try My Guys - Find and Book Trusted Local Service Providers',
-    description: 'Find and book trusted local service providers for all your home service needs',
-    url: 'https://trymyguys.com',
+    description: 'Find and book trusted local service providers for all your home service needs. Connect with professional contractors and get your home projects done right.',
+    url: metadataBase,
     siteName: 'Try My Guys',
     locale: 'en_US',
     type: 'website',
+    images: [{
+      url: '/tmg_flags.png',
+      width: 1200,
+      height: 630,
+      alt: 'Try My Guys - Professional Home Services'
+    }],
+    locales: {
+      'en_US': '/en',
+      'es_ES': '/es'
+    }
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary_large_image',  // This is correct as is in your code
     title: 'Try My Guys - Find and Book Trusted Local Service Providers',
     description: 'Find and book trusted local service providers for all your home service needs',
+    creator: '@trymyguys',
+    images: [{
+      url: '/twitter-image.jpg',
+      alt: 'Try My Guys - Professional Home Services'
+    }]
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  category: 'Home Services',
 }
 
 const geistSans = Geist({
@@ -41,7 +91,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 
 export async function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }];

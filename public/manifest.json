@@ -1,0 +1,21 @@
+{
+  "name": "The Maintenance Guy",
+  "short_name": "TMG",
+  "description": "Connect with homeowners and find projects that match your skills",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#09A4A9",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

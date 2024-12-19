@@ -230,7 +230,7 @@ export default function BenefitsSlider() {
           </p>
           <button
             onClick={() => {}} // Add your waitlist modal handler here
-            className="rounded-full bg-[#09A4A9] hover:bg-[#09A4A9]/90 px-8 py-3 text-white font-medium transition-colors tracking-wide font-roboto"
+            className="rounded-full bg-gray-50 hover:bg-white/90 px-8 py-3 text-black font-normal transition-colors tracking-wide font-roboto"
           >
             Join the waitlist
           </button>
@@ -242,7 +242,7 @@ export default function BenefitsSlider() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-[#09A4A9]' : 'bg-white/40'
+                  index === currentIndex ? 'bg-white' : 'bg-white/40'
                 }`}
                 aria-label={`Go to slide ${index + 1} of ${benefits.length}`}
               />
