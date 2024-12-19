@@ -101,7 +101,7 @@ export default function PricingTiers() {
             <h2 className=" ~text-4xl/6xl md:~text-5xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-12 text-left md:text-center max-w-7xl border-t-2 border-gray-200 mx-auto pt-24">
               Pricing
             </h2>
-            <p className="~mt-6/16 ~text-lg/2xl text-gray-600 md:mb-32 text-left md:text-center">
+            <p className="~mt-6/10 ~text-base/3xl rounded leading-2 text-black text-left w-[90%] sm:w-[80%] sm:text-center mx-auto max-w-5xl md:mb-32">
             Find the perfect plan to suit your business needs.
             </p>
           </div>
