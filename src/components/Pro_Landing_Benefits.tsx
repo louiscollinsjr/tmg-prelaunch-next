@@ -145,10 +145,10 @@ export default function Pro_Landing_Benefits() {
               <h2 className="~text-4xl/6xl md:~text-5xl/7xl  tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25] mb-10 text-left sm:text-center">
                 Free to join. Easy to use.
               </h2>
-              <p className="~mt-6/20 ~text-base/2xl leading-2 text-gray-500 text-left w-[90%] sm:w-[80%] sm:text-center mx-auto md:mb-32">Discover a hassle-free way to grow your business. With free signup and an easy-to-use platform, you’ll enjoy steady work, direct connections with homeowners, and tools to build your reputation. Plus, we handle the advertising, so you can focus on what you do best.  <button onClick={() => setIsModalOpen(true)} className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent  font-medium cursor-pointer">Join the waitlist! {' '} </button></p>
+              <p className="~mt-6/20 ~text-base/3xl leading-2 text-gray-500 text-left w-[90%] sm:w-[80%] sm:text-center mx-auto md:mb-32">Discover a hassle-free way to grow your business. With free signup and an easy-to-use platform.  <button onClick={() => setIsModalOpen(true)} className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent  font-medium cursor-pointer">Join the waitlist! {' '} </button></p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center justify-center mx-auto md:~mt-24/28 max-w-9xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center justify-center mx-auto md:~mt-24/28 max-w-9xl">
               {benefits.map((benefit) => (
                 <div key={benefit.name} className="text-left bg-white p-10 py-12 rounded-3xl sm:min-h-80 ">
                   {/* <div className="~w-10/40 ~h-10/40 mx-auto mb-2 flex items-center justify-center">

@@ -82,7 +82,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center justify-center ~px-5/10 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium text-white rounded-2xl w-fit tracking-wider bg-black hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burnt-orange"
+                className="inline-flex items-center justify-center ~px-5/10 ~py-4/8 ~text-base/3xl md:~text-3xl/5xl font-medium text-white rounded-full w-fit tracking-wider bg-black hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burnt-orange"
               >
                 {t('home.waitlist')}
               </button>

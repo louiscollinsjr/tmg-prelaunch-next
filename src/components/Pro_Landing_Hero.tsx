@@ -21,7 +21,7 @@ export default function ProfessionalHero() {
           <div className="~mt-10/24 flex flex-col sm:flex-row items-start sm:items-center gap-x-6">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="rounded-2xl bg-black ~px-5/10 ~py-4/8 ~text-base/2xl md:~text-3xl/5xl text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burnt-orange font-roboto"
+              className="rounded-full bg-black ~px-5/10 ~py-4/8 ~text-base/2xl md:~text-3xl/5xl text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burnt-orange font-roboto"
             >
               {t('professionals.hero.waitlist')}
             </button>

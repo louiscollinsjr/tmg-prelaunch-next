@@ -105,7 +105,7 @@ export default function PricingTiers() {
             Find the perfect plan to suit your business needs.
             </p>
           </div>
-          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-16 lg:mx-0 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-16">
+          <div className="isolate mx-auto mt-16 grid  grid-cols-1 gap-y-16 lg:mx-0 md:grid-cols-2 xl:grid-cols-4 lg:gap-x-16">
             {pricingTiers.map((tier) => (
               <div
                 key={tier.name}
@@ -131,7 +131,7 @@ export default function PricingTiers() {
                 </p>
                 <button
                   onClick={() => handleTierClick(tier.name)}
-                  className={`mt-6 block w-fit rounded-2xl ~px-5/14 ~py-4/5 ~text-base/2xl md:~text-2xl/3xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-roboto ${
+                  className={`mt-6 block w-fit rounded-full ~px-5/14 ~py-4/5 ~text-base/2xl md:~text-2xl/3xl font-medium leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 font-roboto ${
                     tier.highlight
                       ? 'bg-black text-white hover:bg-opacity-90'
                       : 'bg-zinc-200 text-slate-800 hover:bg-zinc-300'

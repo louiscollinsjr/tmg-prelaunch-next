@@ -38,14 +38,14 @@ export default function PrelaunchNavigation() {
               {isProfessionalsPage ? (
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="inline-flex items-center  ~px-4/8 ~py-2/4 ~text-base/3xl md:~text-3xl/4xl tracking-wide  rounded-2xl text-white bg-black transition-all font-roboto font-thin"
+                  className="inline-flex items-center  ~px-4/8 ~py-2/4 ~text-base/3xl md:~text-3xl/4xl tracking-wide  rounded-full text-white bg-black transition-all font-roboto font-thin"
                 >
                   Join waitlist
                 </button>
               ) : (
                 <Link
                   href="/professionals"
-                  className="inline-flex items-center  ~px-4/8 ~py-2/4 ~text-base/3xl md:~text-3xl/4xl tracking-wide  rounded-2xl text-white bg-black transition-all font-roboto font-thin"
+                  className="inline-flex items-center  ~px-4/8 ~py-2/4 ~text-base/2xl tracking-wide  rounded-full text-white bg-black transition-all font-roboto font-thin"
                 >
                   For Tradespeople
                 </Link>
