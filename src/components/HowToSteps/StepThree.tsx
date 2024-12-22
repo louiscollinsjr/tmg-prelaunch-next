@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-const images = ["/Step0301.png"];
+// Step 3
+const images = ["/step0301.png"]; 
 const background = "/gradient09.png";
 
 export default function StepThree() {
@@ -50,7 +51,7 @@ export default function StepThree() {
           <div className="relative h-full w-full">
             <Image
               src={images[currentImage]}
-              alt="Connect with clients and grow your business"
+              alt="Connect with clients and grow your business!"
               fill
               className="object-contain"
               priority
