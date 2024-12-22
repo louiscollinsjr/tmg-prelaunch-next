@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-const images = ["/step0203.png","/step0201.png","/step0202.png"];
+const images = ["/Step0203.png","/Step0201.png","/Step0202.png"];
 const background = "/gradient09.png";
 
 export default function StepTwo() {
