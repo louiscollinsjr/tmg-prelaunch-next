@@ -1,12 +1,16 @@
 import { NextResponse } from 'next/server';
 import { MetadataRoute } from 'next';
+import { setStaticParamsLocale } from 'next-international/server'
 
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ locale: string }> | { locale: string } }
-) {
-  const { locale } = await Promise.resolve(params);
+  context: { params: Promise<{ locale: string }> }
+): Promise<NextResponse<MetadataRoute.Manifest>> {
+  const { locale } = await context.params;
   
+  // Set the locale for static generation
+  setStaticParamsLocale(locale)
+
   if (!['en', 'es'].includes(locale)) {
     return new NextResponse(null, { status: 404 });
   }
@@ -28,10 +32,16 @@ export async function GET(
     }
   };
 
+  const localeContent = manifestContent[locale as keyof typeof manifestContent];
+
   const manifest: MetadataRoute.Manifest = {
-    ...manifestContent[locale as keyof typeof manifestContent],
+    name: localeContent.name,
+    short_name: localeContent.short_name,
+    description: localeContent.description,
+    lang: localeContent.lang,
+    categories: [...localeContent.categories],
     start_url: `/${locale}`,
-    display: 'standalone',
+    display: 'standalone' as const,
     background_color: '#ffffff',
     theme_color: '#09A4A9',
     prefer_related_applications: true,
@@ -51,13 +61,13 @@ export async function GET(
         src: '/android-chrome-192x192.png',
         sizes: '192x192',
         type: 'image/png',
-        purpose: 'any maskable'
+        purpose: 'maskable'
       },
       {
         src: '/android-chrome-512x512.png',
         sizes: '512x512',
         type: 'image/png',
-        purpose: 'any maskable'
+        purpose: 'any'
       }
     ],
     orientation: 'portrait',

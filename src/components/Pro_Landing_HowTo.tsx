@@ -39,7 +39,7 @@ const steps = [
     description:
       "Our system connects you with tailored opportunities based on your profile. Browse detailed requests and choose projects that fit your business.",
     background: "/gradient09.png",
-    images: ["/step02.png", "/step02-2.png",  "/step02-3.png"],
+    images: ["/step1-1.png","/step02-4.png", "/step02-5.png"],
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
