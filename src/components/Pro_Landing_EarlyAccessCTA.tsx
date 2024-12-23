@@ -9,7 +9,7 @@ export default function Pro_EarlyAccessCTA() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
       <>
-<div className="py-24 md:mt-16 w-full">
+<div className="py-24 md:py-80 md:mt-16 w-full">
 <div className="container max-w-screen-8xl p-[22px] ">
   <div className="flex flex-col md:flex-row justify-between gap-12 mx-auto min-h-[600px]">
     <div className="flex-1 max-w-[50%] p-8">
@@ -48,6 +48,7 @@ export default function Pro_EarlyAccessCTA() {
 
     <div className="flex-1 flex">
       <div className="relative w-full h-full">
+        <div className="absolute bottom-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
         <Image
           src="/iPhone 14 Pro Max Crop34.png"
           alt="TMG Pro App on iPhone"

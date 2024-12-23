@@ -51,7 +51,7 @@ export default function StepTwo() {
         <div className="absolute inset-0 bg-[#09A4A9]/10 backdrop-blur-sm" />
         
         {/* Content container */}
-        <div className="relative z-10 h-full w-full p-2">
+        <div className="relative z-10 h-full w-full p-8 md:p-4">
           <div className="relative h-full w-full md:w-[70%] mx-auto">
             <Image
               src={images[currentImage]}
