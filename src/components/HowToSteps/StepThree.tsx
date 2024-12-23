@@ -48,7 +48,7 @@ export default function StepThree() {
         
         {/* Content container */}
         <div className="relative z-10 h-full w-full p-4">
-          <div className="relative h-full w-full">
+          <div className="relative h-full w-full md:w-[80%] mx-auto">
             <Image
               src={images[currentImage]}
               alt="Connect with clients and grow your business!"
