@@ -30,13 +30,13 @@ export default function BackgroundPattern({ opacity = "0.03", className = "" }: 
       <div 
         className="absolute inset-0 z-20"
         style={{
-          background: 'radial-gradient(circle at center, rgb(244 244 245) 0%, transparent 70%)'
+          background: 'radial-gradient(circle at center, rgb(244 244 245) 0%, transparent 50%)'
         }}
       />
       
       {/* Icons grid */}
       <div 
-        className="absolute inset-0 grid grid-cols-6 md:grid-cols-6 lg:grid-cols-12 gap-2"
+        className="absolute inset-0 grid grid-cols-6 md:grid-cols-6 lg:grid-cols-12 gap-2 mx-auto"
         style={{ opacity }}
       >
         {Array.from({ length: 72 }).map((_, index) => {

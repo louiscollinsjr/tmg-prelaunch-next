@@ -3,15 +3,16 @@
 import { useState } from 'react';
 import AppStoreButtons from '@/components/AppStoreButtons';
 import ProfessionalWaitlistModal from './ProfessionalWaitlistModal';
+import Image from 'next/image';
 
 export default function Pro_EarlyAccessCTA() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
       <>
 <div className="py-24 md:mt-16 w-full">
-<div className="container max-w-5xl p-[22px]">
-  <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-    <div className="flex-1">
+<div className="container max-w-screen-8xl p-[22px] ">
+  <div className="flex flex-col md:flex-row justify-between gap-12 mx-auto min-h-[600px]">
+    <div className="flex-1 max-w-[50%] p-8">
       <div className="flex items-center gap-2 mb-4">
       <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +44,18 @@ export default function Pro_EarlyAccessCTA() {
       </button>
 
       <AppStoreButtons />
+    </div>
+
+    <div className="flex-1 flex">
+      <div className="relative w-full h-full">
+        <Image
+          src="/iPhone 14 Pro Max Crop34.png"
+          alt="TMG Pro App on iPhone"
+          fill
+          className="object-contain object-bottom"
+          priority
+        />
+      </div>
     </div>
 
     <ProfessionalWaitlistModal

@@ -10,7 +10,7 @@ export default function ProfessionalHero() {
   const t = useI18n();
 
   return (
-    <div className="relative isolate px-6 lg:min-h-[80vh] py-32 pb-8">
+    <div className="relative isolate px-6 lg:min-h-[90vh] py-32 pb-8">
        {/* Add the background pattern */}
        <BackgroundPattern  />
 

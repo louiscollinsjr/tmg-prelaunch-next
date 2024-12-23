@@ -15,7 +15,7 @@ export default function PrelaunchNavigation() {
 
   return (
     <>
-      <div className={`fixed top-0 left-0 right-0 z-50 max-w-screen-8xl pb-16 ${isProfessionalsPage ? 'backdrop-blur-sm bg-zinc-100/50' : ''}`}>
+      <div className={`fixed top-0 left-0 right-0 z-50 max-w-screen-8xl pb-16 ${isProfessionalsPage ? 'backdrop-blur-sm bg-zinc-100/5' : ''}`}>
         <div className="mx-auto ~px-6/56 ~pt-6/8">
           <div className="flex h-24 justify-between ~pt-2/12">
             {/* Left side */}
