@@ -1,5 +1,8 @@
+// StepThree Component
+'use client';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useI18n } from '../../app/i18n/client';
 
 // Step 3
 const images = ["/step0301.png"]; 
@@ -7,6 +10,7 @@ const background = "/gradient09.png";
 
 export default function StepThree() {
   const [currentImage, setCurrentImage] = useState(0);
+    const t = useI18n();
 
   useEffect(() => {
     if (images.length <= 1) return;
@@ -23,10 +27,10 @@ export default function StepThree() {
       {/* Left side - Content */}
       <div className="order-2 md:order-1 px-8">
         <h3 className="text-xl/2xl md:text-2xl mb-4">
-          Step 3: Connect and Grow
+           {t("stepThree.title")}
         </h3>
         <p className="text-base/xl text-gray-600">
-          Communicate directly with clients, manage your schedule, and grow your business. Our platform helps you focus on what you do best.
+          {t("stepThree.description")}
         </p>
       </div>
 

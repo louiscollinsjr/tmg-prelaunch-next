@@ -1,5 +1,8 @@
+// StepTwo Component
+'use client';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useI18n } from '../../app/i18n/client';
 
 const images = ["/Step0203.png","/Step0201.png","/Step0202.png"];
 const background = "/gradient09.png";
@@ -7,6 +10,7 @@ const background = "/gradient09.png";
 export default function StepTwo() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+    const t = useI18n();
 
   useEffect(() => {
     if (images.length <= 1) return;
@@ -27,10 +31,10 @@ export default function StepTwo() {
       {/* Left side - Content */}
       <div className="order-2 md:order-1 px-8">
         <h3 className="text-xl/2xl md:text-2xl mb-4">
-          Step 2: Browse Opportunities
+            {t("stepTwo.title")}
         </h3>
         <p className="text-base/xl text-gray-600">
-          Our system connects you with tailored opportunities based on your profile. Browse detailed requests and choose projects that fit your business.
+          {t("stepTwo.description")}
         </p>
       </div>
 

@@ -1,7 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
 import ProfessionalWaitlistModal from './ProfessionalWaitlistModal';
+//import Image from 'next/image'
+
 
 interface Benefit {
   name: string;
@@ -141,8 +145,10 @@ const benefits: Benefit[] = [
 
 export default function BenefitsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+    const [displayedIndex, setDisplayedIndex] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const imageRef = useRef<HTMLDivElement>(null)
 
   // Handle automatic slide transitions
   useEffect(() => {
@@ -152,10 +158,19 @@ export default function BenefitsSlider() {
     const advanceSlide = () => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setCurrentIndex((prev) => {
-          const nextIndex = prev + 1;
-          return nextIndex >= benefits.length ? 0 : nextIndex;
-        });
+           setCurrentIndex((prev) => {
+                const nextIndex = prev + 1;
+             
+              
+               return nextIndex >= benefits.length ? 0 : nextIndex;
+           });
+          setDisplayedIndex((prev) => {
+                const nextIndex = prev + 1;
+             
+              
+               return nextIndex >= benefits.length ? 0 : nextIndex;
+           });
+          
         setIsTransitioning(false);
       }, transitionDuration);
     };
@@ -164,12 +179,22 @@ export default function BenefitsSlider() {
     return () => clearInterval(timer);
   }, []);
 
+    const setCurrentImage = (newIndex: number) => {
+      if(imageRef.current){
+        imageRef.current.style.backgroundImage = `url("${benefits[newIndex].image}")`;
+      }
+
+    }
+
+
   // Handle manual navigation
   const goToSlide = (index: number) => {
-    if (index === currentIndex) return;
+    if (index === displayedIndex) return;
     setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex(index);
+       setTimeout(() => {
+            setCurrentIndex(index)
+           setDisplayedIndex(index)
+            setCurrentImage(index);
       setIsTransitioning(false);
     }, 500);
   };
@@ -181,68 +206,59 @@ export default function BenefitsSlider() {
         <h2 className="~text-4xl/6xl md:~text-5xl/7xl tracking-tight font-medium text-slate-800 leading-[1.3] sm:leading-[1.25 font-roboto">
           Free to Join. Easy to use.
         </h2>
-        <p className="~mt-6/10 ~text-base/3xl rounded leading-2 text-black text-left w-[90%] sm:w-[80%] sm:text-center mx-auto max-w-5xl md:mb-32">Discover a hassle-free way to grow your business. With free signup and an easy-to-use platform.  <button
+        <p className="~mt-6/10 ~text-base/3xl rounded leading-2 text-black text-left w-[90%] sm:w-[80%] sm:text-center mx-auto max-w-5xl md:mb-32">
+            Discover a hassle-free way to grow your business. With free signup and an easy-to-use platform.
+            <button
               onClick={() => setIsModalOpen(true)}
               className="bg-gradient-to-r from-orange-gradient-start to-orange-gradient-end bg-clip-text text-transparent  font-medium cursor-pointer"
             >
               Join the waitlist!{" "}
-            </button></p>
+            </button>
+        </p>
       </div>
 
       <div className="relative  overflow-hidden aspect-[16/9]">
         {/* Background Image with Fade Transition */}
-        <div
+          <div
+              ref={imageRef}
           className={`absolute inset-0 transition-opacity duration-1000 ${
             isTransitioning ? 'opacity-0' : 'opacity-100'
           }`}
+          style={{
+            backgroundImage: `url("${benefits[currentIndex].image}")`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
         >
-          {/* Blurred background */}
-          <div 
-            className="absolute inset-0  scale-110"
-            style={{
-              backgroundImage: `url(${benefits[currentIndex].image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/05" />
-        </div>
-
-        {/* Icon Display
-        <div
-          className={`hidden md:flex absolute inset-0 items-center justify-center transition-opacity duration-1000 ${
-            isTransitioning ? 'opacity-0' : 'opacity-100'
-          }`}
-        >
-          <div className="w-32 h-32 text-white/90 relative z-20 bg-black/30 rounded-lg flex items-center justify-center p-4">
-            {benefits[currentIndex].icon}
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/05" />
           </div>
-        </div> */}
+
+
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-end h-full p-8 pb-16 text-center">
-          <h3 className="~text-3xl/7xl font-medium text-white mb-4">
-            {benefits[currentIndex].name}
+        <div className="relative z-10 flex flex-col md:items-center justify-end h-full p-8 md:pb-16 text-center">
+          <h3 className="text-left text-lg md:text-center md:~text-3xl/7xl font-medium text-white md:mb-4">
+            {benefits[displayedIndex].name}
           </h3>
-          <p className="text-xl text-white/90 max-w-2xl mb-8">
-            {benefits[currentIndex].description}
+          <p className="text-left text-sm md:text-center md:text-xl text-white/90 max-w-[70%] md:max-w-2xl md:mb-8">
+            {benefits[displayedIndex].description}
           </p>
           <button
-            onClick={() => {}} // Add your waitlist modal handler here
-            className="rounded-full bg-gray-50 hover:bg-white/90 px-8 py-3 text-black font-normal transition-colors tracking-wide font-roboto"
+            onClick={() => setIsModalOpen(true)}
+            className="hidden md:block rounded-full bg-gray-50 hover:bg-white/90 px-8 py-3 text-black font-normal transition-colors tracking-wide font-roboto"
           >
             Join the waitlist
           </button>
 
           {/* Dot Indicators */}
-          <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
+          <div className="hidden md:flex absolute bottom-8 left-0 right-0 flex justify-center gap-2">
             {benefits.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-white' : 'bg-white/40'
+                  index === displayedIndex ? 'bg-white' : 'bg-white/40'
                 }`}
                 aria-label={`Go to slide ${index + 1} of ${benefits.length}`}
               />

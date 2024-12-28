@@ -1,17 +1,162 @@
 {
   "hello": "Hola",
   "welcome": "Bienvenido a nuestro sitio",
+  "earlyAccessCTA": {
+        "launchingSoon": "Lanzamiento a principios de 2025",
+      "title": "Regístrate hoy para obtener acceso anticipado a <span className=\"text-burnt-orange\">trabajos locales</span>",
+        "joinWaitlist": "Únete a la lista de espera"
+     },
+  "pricing": {
+      "title": "Precios",
+      "description": "Encuentra el plan perfecto para satisfacer las necesidades de tu negocio.",
+         "perYear": "/año",
+         "joinWaitlist": "Lista de espera",
+      "tiers": [
+        {
+          "name": "Kit de Inicio",
+          "description": "Herramientas esenciales para impulsar tu negocio",
+          "features": [
+            "Perfil Personal o de Negocio (1 Tipo de Servicio)",
+            "Breve Descripción",
+            "Publicidad en Línea",
+            "Imágenes de Proyectos",
+             "Sitio Web",
+             "Servicio de Correo Electrónico",
+             "Calendario de Reservas"
+          ]
+        },
+        {
+          "name": "Conexión Pro",
+          "description": "Obtén acceso a proyectos de alta calidad",
+           "features": [
+             "Perfil Personal o de Negocio (3 Tipos de Servicio)",
+             "Acceso a Proyectos Listados (Hasta 3 Tipos de Servicio)",
+             "Sitio Web Estándar",
+            "Breve Descripción",
+            "Publicidad en Línea",
+             "6 Imágenes de Proyectos",
+            "Servicio de Correo Electrónico",
+           "Calendario de Reservas"
+          ]
+        },
+         {
+          "name": "Maestro Artesano",
+          "description": "Destaca con acceso prioritario a proyectos premium",
+          "features": [
+               "Perfil Personal o de Negocio (6 Tipos de Servicio)",
+              "Acceso a Proyectos Listados (6 Tipos de Servicio)",
+              "Sitio Web de Marca",
+            "Breve Descripción",
+             "Publicidad en Línea",
+              "12 Imágenes de Proyectos",
+           "Servicio de Correo Electrónico",
+            "Calendario de Reservas"
+          ]
+        },
+        {
+          "name": "Contratista Elite",
+           "description": "Desbloquea trabajos exclusivos y proyectos de primer nivel",
+          "features": [
+            "Perfil Personal o de Negocio (Todos los Tipos de Servicio)",
+            "Acceso a Todos los Proyectos Listados",
+             "Sitio Web Personalizado",
+              "Breve Descripción",
+              "Publicidad en Línea",
+           "24 Imágenes de Proyectos",
+              "Servicio de Correo Electrónico",
+              "Calendario de Reservas"
+          ]
+        }
+      ]
+    },
+  "benefitsSlider": {
+      "title": "Unirse es Gratis. Fácil de usar.",
+        "description": "Descubre una forma sencilla de hacer crecer tu negocio. Con registro gratuito y una plataforma fácil de usar.",
+         "descriptionButton": "¡Únete a la lista de espera!",
+          "waitlist": "Lista de espera",
+      "benefits": [
+        {
+          "name": "Trabajo Constante",
+          "description": "Disfruta de un flujo constante de oportunidades de trabajo, sin necesidad de buscar clientes."
+        },
+        {
+          "name": "Conexiones Directas",
+          "description": "Comunícate fácilmente con los propietarios para hacer preguntas y generar confianza."
+        },
+        {
+          "name": "Construye Tu Reputación",
+          "description": "Obtén reseñas positivas para construir credibilidad y atraer más clientes."
+        },
+          {
+          "name": "Fácil Emparejamiento de Trabajo",
+          "description": "Obtén coincidencias con proyectos que se alineen con tus habilidades y horario"
+        },
+        {
+          "name": "Ahorra en Publicidad",
+          "description": "Promocionamos tus servicios sin costo adicional."
+        },
+        {
+          "name": "Expande Tu Red",
+          "description": "Conéctate con propietarios y profesionales para desbloquear nuevas oportunidades."
+        }
+      ]
+    },
+  "professionals": {
+      "hero": {
+        "title": "Hazte visible para clientes locales buscando",
+        "titleHighlight": "profesionales capacitados",
+          "description": "Únete a nuestra plataforma para conectar con propietarios, encontrar proyectos que coincidan con tus habilidades y hacer crecer tu negocio, todo mientras mantienes el control.",
+        "waitlist": "Lista de espera"
+      }
+    },
+    "howTo":{
+        "title":"Cómo funciona",
+        "description":"¡Comenzar es fácil! En solo tres simples pasos, conectarás con propietarios, encontrarás proyectos que coincidan con tus habilidades y harás crecer tu negocio, todo mientras mantienes el control. ",
+        "descriptionButton":"¡Únete a la lista de espera!"
+    },
+        "stepOne": {
+        "title": "Paso 1: Crea Tu Perfil",
+            "description": "Regístrate y crea tu perfil profesional. Agrega tus habilidades, experiencia y áreas de servicio para mostrar tu experiencia a clientes potenciales."
+    },
+        "stepTwo":{
+        "title":"Paso 2: Explora Oportunidades",
+        "description": "Nuestro sistema te conecta con oportunidades personalizadas basadas en tu perfil. Explora solicitudes detalladas y elige proyectos que se ajusten a tu negocio."
+    },
+        "stepThree":{
+        "title":"Paso 3: Conecta y Crece",
+        "description": "Comunícate directamente con los clientes, administra tu horario y haz crecer tu negocio. Nuestra plataforma te ayuda a concentrarte en lo que mejor haces."
+        },
+  "cookieConsent": {
+    "message": "TryMyGuys.com no utiliza cookies de terceros, solo una única cookie interna.",
+      "noThirdParty": "No se envían datos a terceros.",
+      "accept": "Aceptar",
+      "decline": "Rechazar"
+  },
+"footer": {
+     "anyQuestions":"¿Alguna pregunta?",
+      "contactUs": "Contáctanos",
+  "copyright": "© {year} TryMyGuys. Todos los derechos reservados.",
+      "privacyPolicy": "Política de privacidad",
+      "termsOfUse": "Términos de uso",
+       "legal":"Legal"
+    },
+  "nav": {
+    "rollingOutSoon": "Próximamente en",
+    "dallasFortWorth": "Dallas Fort Worth, Texas",
+    "joinWaitlist": "Lista de espera",
+    "forTradespeople": "Para Profesionales"
+  },
   "home": {
     "launchDate": "Lanzamiento a principios de 2025",
     "title": {
       "start": "Encuentra",
-      "local": "profesionales",
-      "trusted": "de confianza",
+      "local": "locales",
+      "trusted": "profesionales de confianza",
       "end": "en minutos"
     },
-    "waitlist": "Lista espera"
+    "waitlist": "Lista de espera"
   },
-  "professionals": {
+  "professionalsOLD": {
     "hero": {
       "title": "Haz crecer tu negocio con",
       "titleHighlight": "TryMyGuys",

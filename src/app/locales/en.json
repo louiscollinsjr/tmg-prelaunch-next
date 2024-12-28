@@ -1,6 +1,151 @@
 {
   "hello": "Hello",
   "welcome": "Welcome to our site",
+  "earlyAccessCTA": {
+      "launchingSoon": "Launching early 2025",
+      "title": "Sign up today to get early access to <span className=\"text-burnt-orange\">local jobs</span>",
+       "joinWaitlist": "Join waitlist"
+    },
+  "pricing": {
+      "title": "Pricing",
+      "description": "Find the perfect plan to suit your business needs.",
+      "perYear": "/year",
+      "joinWaitlist": "Join waitlist",
+      "tiers": [
+        {
+          "name": "Starter Kit",
+          "description": "Essential tools to kickstart your business",
+          "features": [
+            "Personal or Business Profile (1 Service Type)",
+            "Brief Description",
+             "Online Advertisement",
+            "Project Images",
+            "Website",
+            "Email Service",
+             "Booking Calendar"
+          ]
+        },
+        {
+          "name": "Pro Connect",
+          "description": "Get access high-quality projects",
+           "features": [
+            "Personal or Business Profile (3 Service Types)",
+             "Access to Listed Projects (Up to 3 Service Types)",
+             "Standard Website",
+              "Brief Description",
+            "Online Advertisement",
+            "6 Project Images",
+            "Email Service",
+            "Booking Calendar"
+          ]
+        },
+         {
+          "name": "Master Craftsman",
+          "description": "Stand out with priority access to premium projects",
+          "features": [
+             "Personal or Business Profile (6 Service Types)",
+              "Access to Listed Projects (6 Service Types)",
+             "Branded Website",
+              "Brief Description",
+              "Online Advertisement",
+              "12 Project Images",
+            "Email Service",
+            "Booking Calendar"
+          ]
+        },
+        {
+          "name": "Elite Contractor",
+           "description": "Unlock exclusive jobs and Top-Tier Projects",
+          "features": [
+            "Personal or Business Profile (All Service Types)",
+              "Access to All Listed Projects",
+            "Custom Website",
+              "Brief Description",
+              "Online Advertisement",
+            "24 Project Images",
+            "Email Service",
+             "Booking Calendar"
+          ]
+        }
+      ]
+    },
+  "benefitsSlider": {
+    "title": "Free to Join. Easy to use.",
+    "description": "Discover a hassle-free way to grow your business. With free signup and an easy-to-use platform.",
+     "descriptionButton": "Join the waitlist!",
+     "waitlist": "Join waitlist",
+    "benefits": [
+      {
+        "name": "Steady Work",
+        "description": "Enjoy a steady flow of job opportunities—no client searching needed."
+      },
+      {
+        "name": "Direct Connections",
+        "description": "Communicate easily with homeowners to ask questions and build trust."
+      },
+      {
+        "name": "Build Your Reputation",
+        "description": "Earn positive reviews to build credibility and attract more clients."
+      },
+       {
+        "name": "Easy Job Matching",
+        "description": "Get matched with projects that align with your skills and schedule"
+      },
+        {
+        "name": "Save on Advertising",
+        "description": "We promote your services at no extra cost."
+      },
+      {
+         "name": "Expand Your Network",
+        "description": "Connect with homeowners and professionals to unlock new opportunities."
+      }
+    ]
+  },
+  "professionals": {
+    "hero": {
+      "title": "Get discovered by local customers seeking",
+      "titleHighlight": "skilled professionals",
+      "description": "Join our platform to connect with homeowners, find projects that match your skills, and grow your business—all while staying in control.",
+      "waitlist": "Join waitlist"
+    }
+  },
+  "howTo":{
+      "title":"How it works",
+      "description":"Getting started is easy! In just three simple steps, you'll connect with homeowners, find projects that match your skills, and grow your business—all while staying in control. ",
+      "descriptionButton":"Join the waitlist!"
+  },
+   "stepOne": {
+      "title": "Step 1: Create Your Profile",
+      "description": "Sign up and create your professional profile. Add your skills, experience, and service areas to showcase your expertise to potential clients."
+  },
+  "stepTwo":{
+      "title":"Step 2: Browse Opportunities",
+      "description": "Our system connects you with tailored opportunities based on your profile. Browse detailed requests and choose projects that fit your business."
+  },
+  "stepThree":{
+      "title":"Step 3: Connect and Grow",
+      "description": "Communicate directly with clients, manage your schedule, and grow your business. Our platform helps you focus on what you do best."
+  },
+  "cookieConsent": {
+    "message": "TryMyGuys.com doesn't use third party cookies - only a single in-house cookie.",
+    "noThirdParty": "No data is sent to a third party.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "footer": {
+      "anyQuestions":"Any questions?",
+    "contactUs": "Contact us",
+    "copyright": "© {year} TryMyGuys. All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfUse": "Terms of Use",
+      "legal":"Legal"
+  },
+  "nav": {
+    "rollingOutSoon": "Rolling out soon in",
+    "dallasFortWorth": "Dallas Fort Worth Texas",
+    "joinWaitlist": "Join waitlist",
+    "forTradespeople": "For Tradespeople"
+  },
   "home": {
     "launchDate": "Launching early 2025",
     "title": {
@@ -11,7 +156,7 @@
     },
     "waitlist": "Join waitlist"
   },
-  "professionals": {
+  "professionalsOLD": {
     "hero": {
       "title": "Your go-to app for",
       "titleHighlight": "quality jobs, on-demand",

@@ -1,11 +1,15 @@
+// StepOne Component
+'use client';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useI18n } from '../../app/i18n/client';
 
 const images = ["/step01.png"];
 const background = "/gradient09.png";
 
 export default function StepOne() {
   const [currentImage, setCurrentImage] = useState(0);
+    const t = useI18n();
 
   useEffect(() => {
     if (images.length <= 1) return;
@@ -22,10 +26,10 @@ export default function StepOne() {
       {/* Left side - Content */}
       <div className="order-2 md:order-1 px-8">
         <h3 className="text-xl/2xl md:text-2xl mb-4 ">
-          Step 1: Create Your Profile
+          {t("stepOne.title")}
         </h3>
         <p className="text-base/xl text-gray-600">
-          Sign up and create your professional profile. Add your skills, experience, and service areas to showcase your expertise to potential clients.
+          {t("stepOne.description")}
         </p>
       </div>
 
